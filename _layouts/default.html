@@ -6,9 +6,10 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <title>{{ page.title }}</title>
 
-        <link rel="stylesheet" href="/css/foundation.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}css/foundation.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}css/style.css">
 
-        <script src="/js/vendor/custom.modernizr.js"></script>
+        <script src="{{ site.baseurl }}js/vendor/custom.modernizr.js"></script>
     </head>
     <body>
         <div class="contain-to-grid">
@@ -18,18 +19,18 @@
                         <h1>
                             <a href="{{ site.baseurl }}">CWSRestart</a>
                         </h1>
-                        <li class="toggle-topbar menu-icon"><a href="#"><span>&nbsp;</span></a></li>
                     </li>
+                    <li class="toggle-topbar menu-icon"><a href="#"><span>&nbsp;</span></a></li>
                 </ul>
                 <section class="top-bar-section">
                     <ul class="right">
-                        <li><a href="#">Getting started</a></li>
+                        <li><a href="{{ site.baseurl }}pages/gettingstarted.html">Getting started</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="{{ site.baseurl }}pages/faq.html">FAQ</a></li>
                         <li class="divider"></li>
                         <li><a href="#">Manual</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Screenshots</a></li>
+                        <li><a href="{{ site.baseurl }}pages/gallery.html">Screenshots</a></li>
                         <li class="divider"></li>
                         <li class="has-dropdown">
                             <a>Modules</a>
@@ -40,7 +41,6 @@
                         </li>
                         <li class="divider"></li>
                         <li><a href="#">Contact</a></li>
-                        <li class="divider"></li>
                     </ul>
                 </section>
             </nav>
@@ -48,10 +48,12 @@
         <div>{{ content }}</div>
         <script>
         document.write('<script src=' +
-        ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+        ('__proto__' in {} ? '{{ site.baseurl }}js/vendor/zepto' : '{{ site.baseurl }}js/vendor/jquery') +
         '.js><\/script>')
         </script>
-        <script src="/js/foundation.min.js"></script>
+        <script src="{{ site.baseurl }}js/foundation.min.js"></script>
+        <script src="{{ site.baseurl }}js/foundation/foundation.orbit.js"></script>
+        <script src="{{ site.baseurl }}js/foundation/foundation.reveal.js"></script>
         <script>
             $(document).foundation();
         </script>
