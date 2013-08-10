@@ -11,4 +11,4 @@ You also may notice the comment section below, another way to get in touch with 
 
 The new setup is also suited for multiple authors. Just in case someone wants to jump in on the project. I guess I'd have to change my messy commit style then, though.
 
-So, what do you guys think. Do you like the new page? Are you missing features? Maybe a RSS feed? Do you like the design? Let me know below!
+So, what do you guys think. Do you like the new page? Are you missing features? Do you like the design? Let me know below!
