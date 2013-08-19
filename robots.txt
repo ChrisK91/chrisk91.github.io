@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: CWSRestart/js/vendor/zepto
+Disallow: CWSRestart/js/vendor/jquery
