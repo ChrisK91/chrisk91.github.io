@@ -1,0 +1,19 @@
+.borderbottom {
+    border-bottom: 1px solid #bbb;
+}
+
+span.mute {
+    color: #444;
+    font-weight: 100;
+}
+
+div.header span#name {
+    font-weight: 300;
+    font-size: 4em;
+}
+
+div.header span#text {
+    font-weight: 400;
+    font-size: 2em;
+    color: #444;
+}
