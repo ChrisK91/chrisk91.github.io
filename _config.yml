@@ -31,7 +31,7 @@ markdown: kramdown
 repository: ChrisK91/chrisk91.github.io
 
 navigation:
- - title: Home
+ - title: home
    url: /
- - title: About
+ - title: about me
    url: /pages/about.html

@@ -21,7 +21,7 @@ div.header span#name {
 div.header span#text {
     font-weight: 400;
     font-size: 2em;
-    color: #444;
+    color: #bbb;
 }
 
 div.header {
@@ -39,4 +39,12 @@ ul.menu a {
 ul.menu a:hover, a.active {
     background-color: #444;
     color: #ffbb00;
+}
+
+.justify p {
+    text-align: justify
+}
+
+.right {
+    text-align: right;
 }
