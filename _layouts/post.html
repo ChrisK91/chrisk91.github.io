@@ -6,6 +6,13 @@ layout: default
     <div class="large-8 medium-12 columns justify">
         <h1 class="borderbottom">{{ page.title }}</h1>
         <h6 class="subheader right">{{ page.date | date_to_long_string }}</h6>
+        {% if page.keypoints != nil %}
+        <div class="callout small keypoints">
+            <h6>Keypoints:</h6>
+            {{ page.keypoints | markdownify }}
+        </div>
+        {% endif %}
+        {{ content }}
     </div>
     <div class="large-2 columns show-for-large">&nbsp;</div>
 </div>
