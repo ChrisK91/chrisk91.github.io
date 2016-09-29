@@ -4,7 +4,13 @@ layout: default
 <div class="row">
   <div class="medium-9 columns">
     <h1 class="borderbottom">Posts</h1>
-    <p><span class="mute">There's nothing here yet... But feel free to check back soon!</span></p>
+    {% for post in site.posts %}
+        <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+        <h6 class="subheader right">{{ post.date | date_to_string }}</h6>
+        {%if post.blurb != nil %}{{ post.blurb }}{%endif%}
+        <p class="right"><a href="{{ post.url }}">Read more!</a></p>
+        <hr />
+    {% endfor %}
   </div>
   <div class="medium-3 columns sidepanel">
     <h1 class="borderbottom">Links</h1>

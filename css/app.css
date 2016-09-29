@@ -7,7 +7,7 @@ span.mute {
     font-weight: 100;
 }
 
-span.sub {
+span.sub, p.sub {
     color: #777;
     font-weight: 100;
     font-size: 1rem;
@@ -48,3 +48,21 @@ ul.menu a:hover, a.active {
 .right {
     text-align: right;
 }
+
+figure {
+   padding: 5px;
+   border: 2px #ddd solid;
+   display: inline-table;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+}
+
+figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    color: #777;
+    text-align: justify;
+}​
