@@ -1,5 +1,6 @@
 ---
 layout: post
+title: An introduction to color
 keypoints: | 
     - You will get to know what color spaces are
     - You will learn how colors are represented
