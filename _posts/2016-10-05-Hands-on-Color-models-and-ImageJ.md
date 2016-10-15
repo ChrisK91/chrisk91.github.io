@@ -144,7 +144,7 @@ No, let's take a look at our mental note. We determined that our cells were easy
 
 <div class="text-center">
 <figure>
-<img src="/images/color_models_blood/screenshots/purple_nuclei.png" />
+<img src="/images/color_models_blood/screenshots/purple_nuclei.png" itemprop="image"/>
 <figcaption>These settings seem to select the purple nuclei rather well</figcaption>
 </figure>
 </div>

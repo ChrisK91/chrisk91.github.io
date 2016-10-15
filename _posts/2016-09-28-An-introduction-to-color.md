@@ -20,7 +20,7 @@ The term "model" in "color model" should be understood in a more mathematical or
 
 <div class="text-center">
 <figure>
-<img src="/images/color_examples/example_small.jpg" />
+<img src="/images/color_examples/example_small.jpg" itemprop="image" />
 <figcaption>This detail of a Chagall Window can only be shown, because your monitors color space contains all its beautiful colors!</figcaption>
 </figure>
 </div>
