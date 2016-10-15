@@ -2,11 +2,11 @@
 layout: default
 ---
 <div class="row">
-    <div class="large-8 medium-12 large-centered columns justify">
-        <h1 class="borderbottom">{{ page.title }}</h1>
-        <h6 class="subheader right">{{ page.date | date_to_long_string }}</h6>
+    <div class="large-8 medium-12 large-centered columns justify" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <h1 class="borderbottom" itemprop="name">{{ page.title }}</h1>
+        <h6 class="subheader right"><time class="published" itemprop="datePublished" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time></h6>
         {% if page.blurb %}
-            <div class="sub">{{ page.blurb | markdownify }}</div>
+            <div class="sub" itemprop="description">{{ page.blurb | markdownify }}</div>
         {% endif %}
         {% if page.keypoints %}
         <div class="callout small keypoints">
@@ -14,6 +14,8 @@ layout: default
             {{ page.keypoints | markdownify }}
         </div>
         {% endif %}
+        <article itemprop="articleBody">
         {{ content }}
+        </article>
     </div>
 </div>
