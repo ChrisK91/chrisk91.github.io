@@ -1,15 +1,18 @@
 ---
 layout: default
+keywords: ChrisK91, ChrisK, ChrisK91.me, image processing, image analysis for life scientists
 ---
-<div class="row">
+<div class="row" itemscope="" itemtype="http://schema.org/Blog">
   <div class="medium-9 columns">
     <h1 class="borderbottom">Posts</h1>
     {% for post in site.posts %}
-        <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+      <div itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <a href="{{ post.url }}" itemprop="url"><h3 itemprop="name">{{ post.title }}</h3></a>
         <h6 class="subheader right">{{ post.date | date_to_string }}</h6>
-        {%if post.blurb != nil %}{{ post.blurb | markdownify }}{%endif%}
+        <div itemprop="description">{%if post.blurb != nil %}{{ post.blurb | markdownify }}{%endif%}</div>
         <p class="right"><a href="{{ post.url }}">Read more!</a></p>
         <hr />
+      </div>
     {% endfor %}
   </div>
   <div class="medium-3 columns sidepanel">

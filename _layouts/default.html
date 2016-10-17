@@ -5,6 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title == nil %}ChrisK91's personal site{% else %}{{ page.title }} | ChrisK91{% endif %}</title>
+    {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet"> 
     <link rel="stylesheet" href="/css/foundation.css">
