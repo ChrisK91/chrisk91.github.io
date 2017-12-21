@@ -65,4 +65,9 @@ figcaption {
     caption-side: bottom;
     color: #777;
     text-align: justify;
-}​
+}
+
+code {
+    border: none;
+    background: transparent;
+}
