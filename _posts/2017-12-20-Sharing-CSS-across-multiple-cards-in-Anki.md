@@ -32,8 +32,7 @@ Inside your media folder, create your base CSS file. *I recommend to start the n
 
 Obviously you now need to fill the file with the CSS of your choice. The standard layout of my cards is below, in case you need inspiration.
 
-```
-body {
+<pre><code class="css">body {
     background-color: transparent;
     font-family: Arial;
     font-size: 1em;
@@ -44,9 +43,9 @@ body {
     font-size: 1.7em;
     line-height: 1.5em;
     text-align: center;
-}
-```
-    
+}</code></pre>
+
+
 Now we obviously need to include our CSS on our cards, utilizing `@include`. This can be done, by editing your card template. Just insert `@import url("_anki_base.css");` in your CSS, and you're ready to go. When displaying your cards, Anki has set your media folder as base, so if you do further includes stuff/reference images/etc., you have to do it either in absolute paths, or relative to your media collection folder.
 
 <div class="text-center">

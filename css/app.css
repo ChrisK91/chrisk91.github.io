@@ -71,3 +71,11 @@ code {
     border: none;
     background: transparent;
 }
+
+pre {
+    margin: 0;
+}
+
+pre code {
+    margin-bottom: 1rem;
+}
