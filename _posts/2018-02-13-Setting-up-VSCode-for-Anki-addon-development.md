@@ -122,9 +122,9 @@ The now opened .json file is documented [here](https://code.visualstudio.com/doc
 
 As you can see, you need to specify multiple values:
 
-    - ```pythonPath```: is pointed to the python binary. This will reside (with Anaconda/Conda) in your setup directory, in the subfolder "envs"
-    - ```program```: points to the entry python file. This is actually the file that is invoked via ```python runanki```, when you start anki via ```runanki.bat```
-    - ```args```: We can specify a custom profile location via the ```-b PATH``` command. This way, Anki creates a new profile in the current directory (note the ```.``` as current folder). Also, since our code is already in the addons subfolder, it will run as soon as we start Anki.
+- ```pythonPath```: is pointed to the python binary. This will reside (with Anaconda/Conda) in your setup directory, in the subfolder "envs"
+- ```program```: points to the entry python file. This is actually the file that is invoked via ```python runanki```, when you start anki via ```runanki.bat```
+- ```args```: We can specify a custom profile location via the ```-b PATH``` command. This way, Anki creates a new profile in the current directory (note the ```.``` as current folder). Also, since our code is already in the addons subfolder, it will run as soon as we start Anki.
 
 Hit <kbd>F5</kbd> and debugging should start. You can also start debugging via the debugging pane on the left (under the "No bug" sign).
 
@@ -142,7 +142,7 @@ Create a new profile, and open the tools menu. And there we have it: our "test" 
 </figure>
 </div>
 
-## Intellisense
+## Autocomplete
 
 First, it would be nice to have auto completion and code lookup working. We can enable this in the workspace settings:
 
