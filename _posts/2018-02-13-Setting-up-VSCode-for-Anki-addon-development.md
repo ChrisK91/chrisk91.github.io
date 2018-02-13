@@ -10,7 +10,7 @@ keywords: anki, anki and vscode, anki IDE
 Recently, I wrote my very first [add on for Anki](https://ankiweb.net/shared/info/181219369){:target="_blank"}, using Visual Studio Code with the official [Python add on for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-python.python){:target="_blank"}. With Visual Studio Code, you can easily write and debug code and add ons, you will write in the future.
 
 ## Prerequisites
-To get full debugging support, we need to get the Anki source. It is available at the [download section of the website](https://apps.ankiweb.net/){:target="_blank"} under *Linux/BSD* &rarr; *Other Options" &rarr; *Source .tgz*. At the time of writing, the version was *2.0.47*. Download the source and extract it to a location of your liking.
+To get full debugging support, we need to get the Anki source. It is available at the [download section of the website](https://apps.ankiweb.net/){:target="_blank"} under *Linux/BSD* &rarr; *Other Options* &rarr; *Source .tgz*. At the time of writing, the version was *2.0.47*. Download the source and extract it to a location of your liking.
 
 ### Python 2.7
 
