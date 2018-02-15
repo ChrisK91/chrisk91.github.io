@@ -3,7 +3,7 @@ layout: post
 title: Setting up VSCode for Anki add on development.
 keypoints: | 
     - I will highlight configuration steps to set up Visual Studio Code for Anki development
-blurb: Anki uses a SQLite database to keep track of your reviews and cards. I always wanted to use R to create some graphs and visualize my learning process. Here is some code, to get you started as well!
+blurb: VSCode has become a powerful editor for Python. Here I share my setup, to develop Anki addons using VSCode.
 tags: [ "anki", "anki vscode", "vscode anki addon" ]
 keywords: anki, anki and vscode, anki IDE
 ---
