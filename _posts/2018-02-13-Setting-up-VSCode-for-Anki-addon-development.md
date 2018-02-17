@@ -4,8 +4,9 @@ title: Setting up VSCode for Anki add on development.
 keypoints: | 
     - I will highlight configuration steps to set up Visual Studio Code for Anki development
 blurb: VSCode has become a powerful editor for Python. Here I share my setup, to develop Anki addons using VSCode.
-tags: [ "anki", "anki vscode", "vscode anki addon" ]
+tags: [ Anki, Addon Development ]
 keywords: anki, anki and vscode, anki IDE
+comments: true
 ---
 Recently, I wrote my very first [add on for Anki](https://ankiweb.net/shared/info/181219369){:target="_blank"}, using Visual Studio Code with the official [Python add on for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-python.python){:target="_blank"}. With Visual Studio Code, you can easily write and debug code and add ons, you will write in the future.
 

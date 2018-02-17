@@ -5,6 +5,8 @@ blurb: Often times you are interested in features of a certain color. We will lo
 keypoints: | 
     - You will learn how the convert an image to RGB or HSV channels
     - You will get to know the color threshold tool in ImageJ
+comments: true
+tags: [ImageJ]
 ---
 
 ## Setup

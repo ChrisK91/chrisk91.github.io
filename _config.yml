@@ -33,5 +33,7 @@ repository: ChrisK91/chrisk91.github.io
 navigation:
  - title: home
    url: /
+ - title: tags
+   url: /pages/tags.html
  - title: about me
    url: /pages/about.html

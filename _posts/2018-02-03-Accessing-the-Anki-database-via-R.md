@@ -4,8 +4,9 @@ title: Accessing the Anki database from R
 keypoints: | 
     - We will get the Anki database data into R
 blurb: Anki uses a SQLite database to keep track of your reviews and cards. I always wanted to use R to create some graphs and visualize my learning process. Here is some code, to get you started as well!
-tags: [ "anki" ]
+tags: [ Anki, R]
 keywords: anki, anki and R, access anki from R, anki SQLite
+comments: true
 ---
 
 ## Introduction and prerequisites

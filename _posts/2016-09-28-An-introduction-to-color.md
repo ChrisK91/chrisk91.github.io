@@ -6,6 +6,8 @@ keypoints: |
     - You will learn how colors are represented
     - You will understand the acronyms RGB
 blurb: When you start working with digital images, some fundamentals should be known. Here we will take a look at color spaces and models --- ways to represent and break up the "contents" of a color. This knowledge can come in handy, when you want to do automatic feature detection in an image. Maybe you are interested in red precipitates or want to distinguish a purple cell from a green one? Or maybe you are just interested in some basics about images without complicated formulas.
+comments: true
+tags: [Color, ImageJ Basics]
 ---
 
 ## What are color spaces?
