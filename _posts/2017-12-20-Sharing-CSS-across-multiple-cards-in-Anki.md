@@ -24,11 +24,12 @@ In Anki, we have the ability to edit the CSS of individual cards. When you work 
 
 Inside your media folder, create your base CSS file. *I recommend to start the name with an underscore (_)*. This way, the file won't get removed when you check for unused media. It will also be included, when you export your deck. Here, I used `_anki_base.css`
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_images/css_shared/file.png" itemprop="image" />
-<figcaption>This is the place, where your CSS will reside</figcaption>
-</figure>
+<div class="grid-x align-center text-center">
+    <div class="cell large-10">
+        <div class="card"><img src="/images/anki_images/css_shared/file.png" itemprop="image" />
+        <div class="card-section sub">This is the place, where your CSS will reside</div>
+        </div>
+    </div>
 </div>
 
 Obviously you now need to fill the file with the CSS of your choice. The standard layout of my cards is below, in case you need inspiration.
@@ -49,11 +50,12 @@ Obviously you now need to fill the file with the CSS of your choice. The standar
 
 Now we obviously need to include our CSS on our cards, utilizing `@include`. This can be done, by editing your card template. Just insert `@import url("_anki_base.css");` in your CSS, and you're ready to go. When displaying your cards, Anki has set your media folder as base, so if you do further includes stuff/reference images/etc., you have to do it either in absolute paths, or relative to your media collection folder.
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_images/css_shared/css.png" itemprop="image" />
-<figcaption>We can reference the created file with an @include</figcaption>
-</figure>
+<div class="grid-x align-center text-center">
+    <div class="cell large-10">
+        <div class="card"><img src="/images/anki_images/css_shared/css.png" itemprop="image" />
+        <div class="card-section sub">We can reference the created file with an @import</div>
+        </div>
+    </div>
 </div>
 
 ## Troubleshooting

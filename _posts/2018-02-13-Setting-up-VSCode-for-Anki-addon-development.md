@@ -77,20 +77,24 @@ mw.form.menuTools.addAction(action)</code></pre>
 
 Now you should end up with something like this in VSCode:
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_addon_guide/initial_setup.png" />
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-10">
+        <div class="card">
+            <img src="/images/anki_addon_guide/initial_setup.png" />
+        </div>
+    </div>
 </div>
 
 ## Configuring the "run" action
 
 Hit <kbd>F1</kbd> and enter "launch", to create and edit the launch.json configuration file
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_addon_guide/launch.png" />
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-8">
+        <div class="card">
+            <img src="/images/anki_addon_guide/launch.png" />
+        </div>
+    </div>
 </div>
 
 The now opened .json file is documented [here](https://code.visualstudio.com/docs/python/debugging){:target="_blank"} and allows us, to specify the Python directory and command line arguments. We need to specify the options as below:
@@ -129,52 +133,64 @@ As you can see, you need to specify multiple values:
 
 Hit <kbd>F5</kbd> and debugging should start. You can also start debugging via the debugging pane on the left (under the "No bug" sign).
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_addon_guide/initial_start.png" />
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-7">
+        <div class="card">
+            <img src="/images/anki_addon_guide/initial_start.png" />
+        </div>
+    </div>
 </div>
 
 Create a new profile, and open the tools menu. And there we have it: our "test" entry got created:
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_addon_guide/test_menu.png" />
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-7">
+        <div class="card">
+            <img src="/images/anki_addon_guide/test_menu.png" />
+        </div>
+    </div>
 </div>
 
 ## Autocomplete
 
 First, it would be nice to have auto completion and code lookup working. We can enable this in the workspace settings:
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_addon_guide/wssettings.png" />
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-7">
+        <div class="card">
+            <img src="/images/anki_addon_guide/wssettings.png" />
+        </div>
+    </div>
 </div>
 
 Search for "autocomplete", click the pen symbol next to ```"python.autoComplete.extraPaths"```, and again add the path to your Anki source location. Be careful ti either escape backslashes or use forward slashes.
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_addon_guide/ws_edited.png" />
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-10">
+        <div class="card">
+            <img src="/images/anki_addon_guide/ws_edited.png" />
+        </div>
+    </div>
 </div>
 
 You are now able to use Intellisense to autocomplete names and functions. You can also go to the corresponding source for Anki files with <kbd>Ctrl</kbd> and clicking a function name, and you can see annotations/docstrings if available.
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_addon_guide/intellisense.png" />
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-7">
+        <div class="card">
+            <img src="/images/anki_addon_guide/intellisense.png" />
+        </div>
+    </div>
 </div>
 
 ## Linting
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_addon_guide/missing_import.png" />
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-7">
+        <div class="card">
+            <img src="/images/anki_addon_guide/missing_import.png" />
+        </div>
+    </div>
 </div>
 
 Now, you might note, that after saving, a lot of squiggly lines appear. This is because the [linter](https://en.wikipedia.org/wiki/Lint_(software)){:target="_blank"} invoked by the VSCode extension doesn't know where the Anki source code is located. We can remedy this by creating the file ```.pylintrc```, specifying where your anki source code is located:
@@ -182,20 +198,24 @@ Now, you might note, that after saving, a lot of squiggly lines appear. This is 
 <pre><code class="INI">[Master]
 init-hook='import sys; sys.path.append("X:/.../anki-2.0.47/")'</code></pre>
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_addon_guide/pylint.png" />
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-7">
+        <div class="card">
+            <img src="/images/anki_addon_guide/pylint.png" />
+        </div>
+    </div>
 </div>
 
 After editing and resaving your file, all the red squiggly lines will disappear.
 
 If there are still errors in the linted file, this might due to VSCode using the wrong linter (i.e. a Python 3 linter instead of 2). We again can remedy this in the workspace file, by editing the workspace settings, and specifying the ```python.pythonPath```. You need to give the fill path to the python executable, like we did in the *launch.json* file.
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_addon_guide/selectingpython.png" />
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-7">
+        <div class="card">
+            <img src="/images/anki_addon_guide/selectingpython.png" />
+        </div>
+    </div>
 </div>
 
 Sometimes VSCode is unable to install pylint. In that case, go to the command line, activate your environment (```>activate python2```) and run ```>conda install pylint```. Now everything should lint fine. In my experience, pylint has some issues with pywin32 sometimes, but it should give you a general idea.

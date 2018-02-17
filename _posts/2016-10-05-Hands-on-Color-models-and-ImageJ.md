@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hands on&#58 Color models and ImageJ
+title: Hands on — Color models and ImageJ
 blurb: Often times you are interested in features of a certain color. We will look at how to extract the different aspects of color models in ImageJ and see how we can use the Color Threshold option to select features based on their visual appearance.
 keypoints: | 
     - You will learn how the convert an image to RGB or HSV channels
@@ -14,44 +14,56 @@ Now that we've looked at [color spaces and models]({% post_url 2016-09-28-An-int
 
 *Please note:* This image is in JPG format, which is lossy. Saving this image again and again (even with a quality of 100) will cause artifacts. These can even influence your analysis. It's best practice to use a lossless format (e.g. TIF) when storing your data. Also: never overwrite your original data! Always work on a copy.
 
-<div class="text-center">
-<figure>
-<img src="/images/color_models_blood/cll.jpg" />
-<figcaption>We will use this image to put our knowledge of color models to use</figcaption>
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-6">
+        <div class="card">
+            <img src="/images/color_models_blood/cll.jpg" />
+            <div class="card-section sub">We will use this image to put our knowledge of color models to use</div>
+        </div>
+    </div>
 </div>
 
 ## Splitting the image
 
 Let's assume that we are interested in the darker cells, and want to select them using a color threshold. So, let's start by *splitting up the picture into the RGB channels*. This can be done via *Image &rarr; Type &rarr; RGB Stack*. As the name implies, your image will be turned into stack composed of a slice for the red channel, one for the green channel and a third one for the blue channel --- an RGB stack.
 
-<div class="text-center">
-<figure>
-<img src="/images/color_models_blood/screenshots/split_image.jpg" />
-<figcaption>The label of the current slice (yellow) displays the channel that is currently displayed. You can navigate to the other slices with the scroll bar (blue)</figcaption>
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-6">
+        <div class="card">
+            <img src="/images/color_models_blood/screenshots/split_image.jpg" />
+            <div class="card-section sub">The label of the current slice (yellow) displays the channel that is currently displayed. You can navigate to the other slices with the scroll bar (blue)</div>
+        </div>
+    </div>
 </div>
 
 ## Identifying the channels of interest
 
 Now, lets think about what we are actually looking for here. We want information, that tells apart the originally purple cells from the rest of the image. So we check, if one (or more channels) depicts these cells very bright and the background very dark (or vice versa) --- in other words: *we are interested in a slice with large contrast between our feature of interest and the remaining area of the image*. Which channels would you pick?
 
-<div class="row">
-    <div class="medium-3 columns">
-        <img src="/images/color_models_blood/cll.jpg" />
-        <p class="sub" style="text-align:center">Original</p>
+<div class="grid-x grid-padding-x">
+    <div class="cell medium-3">
+        <div class="card">
+            <img src="/images/color_models_blood/cll.jpg" />
+            <div class="card-section"><p class="sub" style="text-align:center">Original</p></div>
+        </div>
     </div>
-    <div class="medium-3 columns">
-        <img src="/images/color_models_blood/Red.jpg" />
-        <p class="sub" style="text-align:center">Red channel</p>
+    <div class="cell medium-3">
+        <div class="card">
+            <img src="/images/color_models_blood/Red.jpg" />
+            <div class="card-section"><p class="sub" style="text-align:center">Red channel</p></div>
+        </div>
     </div>
-    <div class="medium-3 columns">
-        <img src="/images/color_models_blood/Green.jpg" />
-        <p class="sub" style="text-align:center">Green channel</p>
+    <div class="cell medium-3">
+        <div class="card">
+            <img src="/images/color_models_blood/Green.jpg" />
+            <div class="card-section"><p class="sub" style="text-align:center">Green channel</p></div>
+        </div>
     </div>
-    <div class="medium-3 columns">
-        <img src="/images/color_models_blood/Blue.jpg" />
-        <p class="sub" style="text-align:center">Blue channel</p>
+    <div class="cell medium-3">
+        <div class="card">
+            <img src="/images/color_models_blood/Blue.jpg" />
+            <div class="card-section"><p class="sub" style="text-align:center">Blue channel</p></div>
+        </div>
     </div>
 </div>
 
@@ -66,22 +78,30 @@ There are two options to change the stack back to the original image:
 
 Both options work just fine. We can then change the type to an HSV stack with *Image &rarr; Type &rarr; HSB Stack* (remember: sometimes the V for value is replaced with B for brightness). Now look again if our cells stand out in one channel.
 
-<div class="row">
-    <div class="medium-3 columns">
-        <img src="/images/color_models_blood/cll.jpg" />
-        <p class="sub" style="text-align:center">Original</p>
+<div class="grid-x grid-padding-x">
+    <div class="cell medium-3">
+        <div class="card">
+            <img src="/images/color_models_blood/cll.jpg" />
+            <div class="card-section"><p class="sub" style="text-align:center">Original</p></div>
+        </div>
     </div>
-    <div class="medium-3 columns">
-        <img src="/images/color_models_blood/Hue.jpg" />
-        <p class="sub" style="text-align:center">Hue channel</p>
+    <div class="cell medium-3">
+        <div class="card">
+            <img src="/images/color_models_blood/Hue.jpg" />
+            <div class="card-section"><p class="sub" style="text-align:center">Hue channel</p></div>
+        </div>
     </div>
-    <div class="medium-3 columns">
-        <img src="/images/color_models_blood/Saturation.jpg" />
-        <p class="sub" style="text-align:center">Saturation channel</p>
+    <div class="cell medium-3">
+        <div class="card">
+            <img src="/images/color_models_blood/Saturation.jpg" />
+            <div class="card-section"><p class="sub" style="text-align:center">Saturation channel</p></div>
+        </div>
     </div>
-    <div class="medium-3 columns">
-        <img src="/images/color_models_blood/Brightness.jpg" />
-        <p class="sub" style="text-align:center">Value (= brightness) channel</p>
+    <div class="cell medium-3">
+        <div class="card">
+            <img src="/images/color_models_blood/Brightness.jpg" />
+            <div class="card-section"><p class="sub" style="text-align:center">Value (= brightness) channel</p></div>
+        </div>
     </div>
 </div>
 
@@ -96,11 +116,12 @@ In imaging, a threshold assigns every pixel one of two categories. With our cell
 
 Note that both categories complete each other --- there is no third possibility or an uncertainty. Every pixel will either be of category one or two. Let's open up the color threshold menu with *Image &rarr; Adjust &rarr; Color threshold...*
 
-<div class="text-center">
-<figure>
-<img src="/images/color_models_blood/screenshots/color_threshold.png" />
-<figcaption>The color threshold window.</figcaption>
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-5">
+        <div class="card"><img src="/images/color_models_blood/screenshots/color_threshold.png" />
+        <div class="card-section sub text-center">The color threshold window.</div>
+        </div>
+    </div>
 </div>
 
 **General layout:** You can notice that the window is split in several parts. The vast majority of space is occupied by settings corresponding to the "parts" of our color model. Since I've selected "HSB" at the bottom (in the *Color space* setting), these "parts" are *hue*, *saturation* and *brightness*. You can switch to another model, e.g. *RGB* and see how the three controls will change to *red*, *green* and *blue*. But for now, we will leave *HSB* selected.
@@ -117,11 +138,12 @@ There are also several other buttons. *Sample* will try to create a filter based
 
 Select 0 on the upper slider of each filter, and 255 on the lower slider. Make sure that *Pass* is checked:
 
-<div class="text-center">
-<figure>
-<img src="/images/color_models_blood/screenshots/sample_settings.png" />
-<figcaption>Let's adjust our filter so that everything passes.</figcaption>
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-11">
+        <div class="card"><img src="/images/color_models_blood/screenshots/sample_settings.png" />
+        <div class="card-section sub text-center">Let's adjust our filter so that everything passes.</div>
+        </div>
+    </div>
 </div>
 
 Now the complete picture is red. This is because we perform three checks:
@@ -144,20 +166,24 @@ And since no pixel satisfies these conditions, nothing is colored in red.
 
 No, let's take a look at our mental note. We determined that our cells were easy to recognize in the saturation channel. Adjust your filter so that every *hue* and every *brightness* passes. This can be accomplished by *either* selecting a range of 80 to 255 and the *pass* option *or* selecting the range 0 to 80 *without* the *pass* option:
 
-<div class="text-center">
-<figure>
-<img src="/images/color_models_blood/screenshots/purple_nuclei.png" itemprop="image"/>
-<figcaption>These settings seem to select the purple nuclei rather well</figcaption>
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-11">
+        <div class="card">
+            <img src="/images/color_models_blood/screenshots/purple_nuclei.png" itemprop="image"/>
+            <div class="card-section sub text-center">These settings seem to select the purple nuclei rather well</div>
+        </div>
+    </div>
 </div>
 
 You can see that the nuclei of the purple cells are selected. If you want to select the surrounding cytoplasm as well, we have open the saturation filter even more, so that the whole cell is selected, e.g. let a range from 11 to 255 pass. Don't be confused by the erythrocytes, we can exclude them based on hue. Adjust the *hue filter* to only let blue and violet colors pass. For example like this:
 
-<div class="text-center">
-<figure>
-<img src="/images/color_models_blood/screenshots/complete_purple.png" />
-<figcaption>By opening the saturation filter even more (while constricting based on hue) we can select the complete purple cell</figcaption>
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-11">
+        <div class="card">
+            <img src="/images/color_models_blood/screenshots/complete_purple.png" />
+            <div class="card-section sub text-center">By opening the saturation filter even more (while constricting based on hue) we can select the complete purple cell</div>
+        </div>
+    </div>
 </div>
 
 But unfortunately some parts of the erythrocytes are selected as well...
@@ -168,11 +194,13 @@ You should now know how to use the color threshold window. So, try to create a t
 
 I ended up with the settings below.
 
-<div class="text-center">
-<figure>
-<img src="/images/color_models_blood/screenshots/rgb_settings.png" />
-<figcaption>Thresholding based on RGB</figcaption>
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-11">
+        <div class="card">
+            <img src="/images/color_models_blood/screenshots/rgb_settings.png" />
+            <div class="card-section sub text-center">Thresholding based on RGB</div>
+        </div>
+    </div>
 </div>
 
 You can see that the upper left cell is really causing trouble, since it is so bright. The color of it's cytoplasm is very similar to the color of a bright erythrocyte. But as a start, we didn't do too bad.
@@ -188,11 +216,13 @@ The result is still not perfect. Depending on your settings we still would need 
 - Try a sunset photo to select the sky and the ground
 - Use a flourescent merge image and see, if you can select the original channels of this merge image.
 
-<div class="text-center">
-<figure>
-<img src="/images/color_models_blood/outlook.png" />
-<figcaption>ImageJ contains tools to clean our selection. We can also split the cells and measure them.</figcaption>
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-11">
+        <div class="card">
+            <img src="/images/color_models_blood/outlook.png" />
+            <div class="card-section sub text-center">ImageJ contains tools to clean our selection. We can also split the cells and measure them.</div>
+        </div>
+    </div>
 </div>
 
 #### Image sources

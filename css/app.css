@@ -29,16 +29,16 @@ div.header {
 }
 
 ul.menu {
-    background-color: #777;
+    background-color: rgb(231, 231, 231);
 }
 
 ul.menu a {
-    color: #bbb;
+    color: rgb(94, 94, 94);
 }
 
-ul.menu a:hover, a.active {
-    background-color: #444;
-    color: #ffbb00;
+ul.menu a:hover, a.is-active {
+    background: #1779ba;
+    color: #fefefe;  
 }
 
 .justify p {

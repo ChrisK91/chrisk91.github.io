@@ -20,11 +20,13 @@ Now, let's get back to the real world. In digital imaging and displays, colors a
 
 The term "model" in "color model" should be understood in a more mathematical or statistical way, meaning that it *describes* something. More precisely, a color model describes how the generate a specific color. Do you still remember the example above? The color model we used was a relative one. You could also say "mix 10g of red with 20g of blue", and you would obviously end up with the same color. It follows that the *color model* is a *instruction on how the generate a color in a color space*
 
-<div class="text-center">
-<figure>
-<img src="/images/color_examples/example_small.jpg" itemprop="image" />
-<figcaption>This detail of a Chagall Window can only be shown, because your monitors color space contains all its beautiful colors!</figcaption>
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-6">
+        <div class="card">
+        <img src="/images/color_examples/example_small.jpg" itemprop="image" />
+        <div class="card-section sub">This detail of a Chagall Window can only be shown, because your monitors color space contains all its beautiful colors!</div>
+        </div>
+    </div>
 </div>
 
 ### The RGB model
@@ -35,22 +37,22 @@ Lets look again at our real world example --- the monitor. Every point on your m
 
 We can use this model, to extract information about a color. For instance, let's extract the amount of red, green and blue from the example image above.
 
-<div class="row">
-    <div class="medium-3 columns">
-        <img src="/images/color_examples/example_small.jpg" />
-        <p class="sub" style="text-align:center">Original</p>
+<div class="grid-x grid-padding-x">
+    <div class="cell medium-3">
+        <div class="card"><img src="/images/color_examples/example_small.jpg" />
+        <div class="card-section"><p class="sub" style="text-align:center">Original</p></div></div>
     </div>
-    <div class="medium-3 columns">
-        <img src="/images/color_examples/Red.jpg" />
-        <p class="sub" style="text-align:center">Red</p>
+    <div class="cell medium-3">
+        <div class="card"><img src="/images/color_examples/Red.jpg" />
+        <div class="card-section"><p class="sub" style="text-align:center">Red</p></div></div>
     </div>
-    <div class="medium-3 columns">
-        <img src="/images/color_examples/Green.jpg" />
-        <p class="sub" style="text-align:center">Green</p>
+    <div class="cell medium-3">
+        <div class="card"><img src="/images/color_examples/Green.jpg" />
+        <div class="card-section"><p class="sub" style="text-align:center">Green</p></div></div>
     </div>
-    <div class="medium-3 columns">
-        <img src="/images/color_examples/Blue.jpg" />
-        <p class="sub" style="text-align:center">Blue</p>
+    <div class="cell medium-3">
+        <div class="card"><img src="/images/color_examples/Blue.jpg" />
+        <div class="card-section"><p class="sub" style="text-align:center">Blue</p></div></div>
     </div>
 </div>
 
@@ -62,14 +64,14 @@ You can easily see in the pictures above, that black appears as black in every c
 
 Thinking with this RGB model can be quite counterintuitive. Let's image we are working on a digital image of a blue sky. Since we think this blue sky is boring, we want to turn it into a nice red sunset sky. Now, since we've learned that every color has a red amount, we just increase that. Let's see what happens. 
 
-<div class="row">
-    <div class="medium-6 columns">
-        <img src="/images/color_examples/rgb_original.jpg" />
-        <p class="sub" style="text-align:center">Original</p>
+<div class="grid-x grid-padding-x">
+    <div class="cell medium-6">
+        <div class="card"><img src="/images/color_examples/rgb_original.jpg" />
+        <div class="card-section"><p class="sub" style="text-align:center">Original</p></div></div>
     </div>
-    <div class="medium-6 columns">
-        <img src="/images/color_examples/rgb_with_red.jpg" />
-        <p class="sub" style="text-align:center">Increased red</p>
+    <div class="cell medium-6">
+        <div class="card"><img src="/images/color_examples/rgb_with_red.jpg" />
+        <div class="card-section"><p class="sub" style="text-align:center">Increased red</p></div></div>
     </div>
 </div>
 
@@ -77,11 +79,13 @@ Now our blue has turned into pink. But if you think about it, that makes sense: 
 
 The *HSV color model describes a color with hue, saturation and value* (the latter sometimes replaced with brightness, the result would be HSB). The interpretations of each letter can be best understood with a diagram.
 
-<div class="text-center">
-    <figure>
-    <img src="/images/color_examples/hsv_model.png" />
-    <figcaption>The HSV model can be represented as a cone. Adapted from <a href="https://commons.wikimedia.org/wiki/File:Hsl-hsv_models.svg" target="_blank">Jacob Rus</a>, licensed under CC BY SA</figcaption>
-    </figure>
+<div class="grid-x align-center">
+    <div class="cell large-6">
+        <div class="card">
+            <img src="/images/color_examples/hsv_model.png" />
+            <div class="card-section sub">The HSV model can be represented as a cone. Adapted from <a href="https://commons.wikimedia.org/wiki/File:Hsl-hsv_models.svg" target="_blank">Jacob Rus</a>, licensed under CC BY SA</div>
+        </div>
+    </div>
 </div>
 
 The hue is often represented as degree and represents the color. Red is located at 0°, green at 120° and blue at 240°. The remaining colors along this circle are a smooth transition.
@@ -92,22 +96,30 @@ Last but not least value. This one is often calls brightness and does as expecte
 
 Starting with an RGB color, it is actually possible to calculate the values of HSV. Fortunately we have programs which resolve this task for us.
 
-<div class="row">
-    <div class="medium-3 columns">
-        <img src="/images/color_examples/example_small.jpg" />
-        <p class="sub" style="text-align:center">Original</p>
+<div class="grid-x grid-padding-x">
+    <div class="cell medium-3">
+        <div class="card">
+            <img src="/images/color_examples/example_small.jpg" />
+            <div class="card-section"><p class="sub" style="text-align:center">Original</p></div>
+        </div>
     </div>
-    <div class="medium-3 columns">
-        <img src="/images/color_examples/Hue.jpg" />
-        <p class="sub" style="text-align:center">Hue</p>
+    <div class="cell medium-3">
+        <div class="card">
+            <img src="/images/color_examples/Hue.jpg" />
+            <div class="card-section"><p class="sub" style="text-align:center">Hue</p></div>
+        </div>
     </div>
-    <div class="medium-3 columns">
-        <img src="/images/color_examples/Saturation.jpg" />
-        <p class="sub" style="text-align:center">Saturation</p>
+    <div class="cell medium-3">
+        <div class="card">
+            <img src="/images/color_examples/Saturation.jpg" />
+            <div class="card-section"><p class="sub" style="text-align:center">Saturation</p></div>
+        </div>
     </div>
-    <div class="medium-3 columns">
-        <img src="/images/color_examples/Brightness.jpg" />
-        <p class="sub" style="text-align:center">Value (brightness)</p>
+    <div class="cell medium-3">
+        <div class="card">
+            <img src="/images/color_examples/Brightness.jpg" />
+            <div class="card-section"><p class="sub" style="text-align:center">Value (brightness)</p></div>
+        </div>
     </div>
 </div>
 

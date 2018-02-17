@@ -16,28 +16,29 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="row">
-      <div class="large-12 columns header">
-        <span id="name">ChrisK91</span><span id="text">.me</span><br /><span class="sub show-for-medium">All kinds of ramblings &hellip;</span>
+    <div class="grid-container">
+      <div class="grid-x">
+        <div class="cell medium-9 medium-centered header">
+          <span id="name">ChrisK91</span><span id="text">.me</span><br /><span class="sub show-for-medium">All kinds of ramblings &hellip;</span>
+        </div>
+      </div>
+
+      <div class="grid-x">
+        <div class="cell large-12 header">
+          <ul class="vertical medium-horizontal menu">
+            {% for link in site.navigation %}
+              {% assign current = nil %}
+              {% if page.url == link.url %}
+                  {% assign current = 'is-active' %}
+              {% endif %}
+              <li class="{{ current }}">
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
-
-    <div class="row">
-      <div class="large-12 columns header">
-        <ul class="vertical medium-horizontal menu">
-          {% for link in site.navigation %}
-            {% assign current = nil %}
-            {% if page.url == link.url %}
-                {% assign current = 'active' %}
-            {% endif %}
-            <li>
-                <a href="{{ link.url }}" class="{{ current }}">{{ link.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-
     {{ content }}
 
     <script src="/js/vendor/jquery.js"></script>

@@ -111,10 +111,12 @@ Ok, so let's get some plots going. First, let's check out, let's see how our rev
 
 <pre><code class="R">ggplot(revisionData, aes(time / 1000)) + geom_histogram(binwidth = 10) + xlab("Time spent reviewing a single card\n(seconds)") + scale_y_log10()</code></pre>
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_stats/histogram.png" />
-</figure>
+<div class="grid-x align-center">
+  <div class="cell large-11">
+    <div class="card">
+      <img src="/images/anki_stats/histogram.png" />
+    </div>
+  </div>
 </div>
 
 You can see, the time spent on each review seems to exponentially decrease, i.e. I do a lot of reviews in a few seconds, and only a hand full really take long. Also note, that the time cuts off at the level specified in the deck options, which I have set to 360. I also had it set to 600 some time ago.
@@ -123,10 +125,12 @@ Now, I'm interest in breaking this data up into my different decks. I will also 
 
 <pre><code class="R">ggplot(revisionData, aes(time / 1000)) + geom_histogram(binwidth = 10) + xlim(0, 400) + xlab("time spent reviewing a single card\n(seconds)") + scale_y_log10() + ggtitle("Review times") + facet_wrap(~ deck)</code></pre>
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_stats/histogram_decks.png" />
-</figure>
+<div class="grid-x align-center">
+  <div class="cell large-11">
+    <div class="card">
+      <img src="/images/anki_stats/histogram_decks.png" />
+    </div>
+  </div>
 </div>
 
 The purple deck was used for my last exam, where I used anki extensively. This is easily recognizable by looking at the distribution. The review times stretch out further. For my surgical OSCE (light blue), I only had a small amount of very simple cards, therefore cards are much more clustered to the left. The bottom right and left (greenish and brownish) are language related, and I study them only for fun. Cards are only vocabularies, and are recalled very fast.
@@ -135,10 +139,12 @@ Finally, lets see how our decks are composed. I want to check out, how my interv
 
 <pre><code class="R">ggplot(cardData, aes(ivl)) + geom_histogram(binwidth = 10) + facet_wrap(~ deck, scales = "free_y")</code></pre>
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_stats/histogram_review_times.png" />
-</figure>
+<div class="grid-x align-center">
+  <div class="cell large-11">
+    <div class="card">
+      <img src="/images/anki_stats/histogram_review_times.png" />
+    </div>
+  </div>
 </div>
 
 Note the free scales on the y axis. The blue deck (top left), and the four top right ones (orange, pink, green and green) are older decks. You can see, how they have rather long intervals. Again the purple deck from my last exam. The cards are still very young here, indicated by the low intervals. My language decks have a huge number of cards, and I recently started with them. This is why they only have very low intervals.
@@ -155,18 +161,22 @@ cardData$mature <- cardData$ivl > 21 # you can also use this, to show mature car
 ggplot(cardData, aes(X, Y)) + geom_tile(aes(fill = ivl)) + scale_fill_gradient2(mid = "#dd6a27", high = "#12e824")
 </code></pre>
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_stats/review_heatmap.png" />
-</figure>
+<div class="grid-x align-center">
+  <div class="cell large-5">
+    <div class="card">
+      <img src="/images/anki_stats/review_heatmap.png" />
+    </div>
+  </div>
 </div>
 
 As you can see, I have still a long way to go, until all my cards are mature. This is due to the large premade language decks I've imported. Below, I've filtered the premade decks out, and you can see a large red chunk disappears
 
-<div class="text-center">
-<figure>
-<img src="/images/anki_stats/review_heatmap_filtered.png" />
-</figure>
+<div class="grid-x align-center">
+  <div class="cell large-5">
+    <div class="card">
+      <img src="/images/anki_stats/review_heatmap_filtered.png" />
+    </div>
+  </div>
 </div>
 
 ## Summary
