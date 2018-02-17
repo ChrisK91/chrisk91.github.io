@@ -178,7 +178,7 @@ The last example comes from reddit, where someone wanted to change the card back
     </div>
 </div>
 
-The code here is pretty straight forward. We will again use a ```div```-Element, but this time stretch it all the way over our card. We can position the element on the back, using the ```z-Index```. Imagine the content of your cards to be like layers. With the ````z-Index```, we can display an element either on top of other stuff, or below it.
+The code here is pretty straight forward. We will again use a ```div```-Element, but this time stretch it all the way over our card. We can position the element on the back, using the ```z-Index```. Imagine the content of your cards to be like layers. With the ```z-Index```, we can display an element either on top of other stuff, or below it.
 
 {% raw %}
 <pre><code class="HTML">{{FrontSide}}
