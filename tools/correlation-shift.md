@@ -9,10 +9,12 @@ You can use this tool to maximize the correlation of two images. This can be use
 
 <span class="sub">This tool is released under the MIT license. Feel free to copy and redistribute it.</span>
 
-<div class="text-center">
-<figure>
-<img src="/images/tools/correlation-shift.png" />
-</figure>
+<div class="grid-x align-center">
+    <div class="cell large-10">
+        <div class="card">
+            <img src="/images/tools/correlation-shift.png" />
+        </div>
+    </div>
 </div>
 
 ### Notes
