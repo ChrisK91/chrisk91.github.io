@@ -18,7 +18,7 @@ layout: default
             {% endif %}
             {% if page.tags %} <div class="sub">Tags: 
             {% for tag in page.tags %}
-                <a href="#{{ tag | slugify }}" class="label"> {{ tag }} </a>
+                <a href="/pages/tags.html#{{ tag | slugify }}" class="label"> {{ tag }} </a>
             {% endfor %}</div>
             {% endif %}
             <hr />
