@@ -1,6 +1,7 @@
 ---
 layout: default
 keywords: ChrisK91, ChrisK, ChrisK91.me, image processing, image analysis for life scientists
+comments: true
 ---
 <div class="grid-container">
   <div class="grid-x grid-padding-x" itemscope="" itemtype="http://schema.org/Blog">
@@ -9,7 +10,7 @@ keywords: ChrisK91, ChrisK, ChrisK91.me, image processing, image analysis for li
       {% for post in site.posts %}
         <div itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
           <a href="{{ post.url }}" itemprop="url"><h3 itemprop="name">{{ post.title }}</h3></a>
-          <h6 class="subheader right">{{ post.date | date_to_string }}</h6>
+          <h6 class="subheader right">{{ post.date | date_to_string }}, <span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}"></span></h6>
           <div itemprop="description">{%if post.blurb != nil %}{{ post.blurb | markdownify }}{%endif%}</div>
           <p class="right"><a href="{{ post.url }}">Read more!</a></p>
           <hr />
