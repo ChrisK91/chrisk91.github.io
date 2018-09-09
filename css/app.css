@@ -79,3 +79,7 @@ pre {
 pre code {
     margin-bottom: 1rem;
 }
+
+a label {
+    cursor: pointer !important;
+}

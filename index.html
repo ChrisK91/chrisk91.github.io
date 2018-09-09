@@ -1,4 +1,4 @@
----
+--- 
 layout: default
 keywords: ChrisK91, ChrisK, ChrisK91.me, image processing, image analysis for life scientists
 comments: true
@@ -7,15 +7,25 @@ comments: true
   <div class="grid-x grid-padding-x" itemscope="" itemtype="http://schema.org/Blog">
     <div class="cell medium-9">
       <h1 class="borderbottom">Posts</h1>
-      {% for post in site.posts %}
-        <div itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
-          <a href="{{ post.url }}" itemprop="url"><h3 itemprop="name">{{ post.title }}</h3></a>
-          <h6 class="subheader right">{{ post.date | date_to_string }}, <span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}"></span></h6>
-          <div itemprop="description">{%if post.blurb != nil %}{{ post.blurb | markdownify }}{%endif%}</div>
-          <p class="right"><a href="{{ post.url }}">Read more!</a></p>
-          <hr />
-        </div>
+      <h6 class="subheader right"><a class="button secondary" href="/pages/tags">browse by category</a></h6>
+
+      {% for post in paginator.posts %}
+      <div itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <a href="{{ post.url }}" itemprop="url">
+          <h3 itemprop="name">{{ post.title }}</h3>
+        </a>
+        <h6 class="subheader right">{{ post.date | date_to_string }},
+          <span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}"></span>
+        </h6>
+        <div itemprop="description">{%if post.blurb != nil %}{{ post.blurb | markdownify }}{%endif%}</div>
+        <p class="right">
+          <a href="{{ post.url }}">Read more!</a>
+        </p>
+        <hr />
+      </div>
       {% endfor %}
+
+      {% include paginator.html %}
     </div>
     <div class="cell auto sidepanel">
       <h1 class="borderbottom">Links</h1>
