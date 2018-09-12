@@ -64,5 +64,6 @@ Now we obviously need to include our CSS on our cards, utilizing `@include`. Thi
 - I recommend editing your CSS in the card editor, and pasting it into your base file when you're happy with it. The preview in the card editor will update in real time.
 - Changes in your CSS file will not always sync. Use the add on mentioned above, to work around that. Refresh Media will mark your file for uploading on the next sync.
 - As always: back up your folders regularly
+- Some add ons can interfere with custom CSS. You can temporarily disable all addons by holding the <kbd>shift</kbd>-key when starting Anki (works both in 2.0 and 2.1)
 
 And that's it. Look out for a future post about how CSS can be used to add visual cues on your cards!
