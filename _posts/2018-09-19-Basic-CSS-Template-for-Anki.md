@@ -9,6 +9,9 @@ tags: [Anki, CSS]
 keywords: anki css, anki css template, anki lists
 comments: true
 ---
+{% comment %}
+NOTE: Update index.html when updating this post!!!!
+{% endcomment %}
 
 ## Motivation
 
