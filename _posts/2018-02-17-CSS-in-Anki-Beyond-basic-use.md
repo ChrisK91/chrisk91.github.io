@@ -11,7 +11,7 @@ comments: true
 ---
 ## Prerequisites and getting started
 
-Under the hood, every Anki card is actually displayed as a website. These templates can be edited using the internal editor, located under the <kbd>Cards</kbd> button (when you edit cards). For this highlight of CSS uses in Anki, I assume that you are familiar with editing cards and note types. If these things are new to you, you can read up on them in the [official Anki manual](https://apps.ankiweb.net/docs/manual.html){:target="_blank"} (Sections "Adding a note type" and "Cards and templates"). The introduction also covers HTML and CSS, so I'm assuming you're familiar with that as well. I have some links at the end, if you want to get deeper into CSS.
+Under the hood, every Anki card is actually displayed as a website. These templates can be edited using the internal editor, located under the <kbd>Cards</kbd> button (when you edit cards). For this highlight of CSS uses in Anki, I assume that you are familiar with editing cards and note types. If these things are new to you, you can read up on them in the [official Anki manual](https://apps.ankiweb.net/docs/manual.html){:target="_blank"} (Sections "Adding a note type" and "Cards and templates"). The introduction also covers HTML and CSS, so I'm assuming you're familiar with that as well. A short introduction into HTML can be found [here]({% post_url 2018-09-28-Anki-Templates-Introduction-HTML %}). I have some links at the end, if you want to get deeper into CSS.
 
 If you have a lot of shared CSS code, you can also put this code in a central file, and edit it from there. This is a more or less undocumented feature, and I wrote about it [here]({% post_url 2017-12-20-Sharing-CSS-across-multiple-cards-in-Anki %}).
 
