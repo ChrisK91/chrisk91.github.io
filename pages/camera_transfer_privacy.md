@@ -3,7 +3,7 @@ layout: single_column
 title: Privacy policy for Camera Transfer
 ---
 
-# English version below
+*English version below*
 
 Die App teilt keine Inhalte mit Drittanbietern. Bei einem Absturz werden Informationen gesammelt, und an Microsoft gesendet. Dies kann in den Einstellungen des Betriebssystems deaktiviert werden. 
 
