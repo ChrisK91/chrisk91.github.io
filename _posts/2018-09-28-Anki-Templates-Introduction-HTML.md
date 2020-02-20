@@ -114,7 +114,7 @@ Some tags can have additional "information", in form of attributes. For instance
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 {% raw %}
-Here we have a new tag ```<a>``` which is an anchor. This anchor can link to a website (or file, etc.) when the ```href``` attribute is set. In this case, this attribute is set to ```https://en.wikipedia.org/w/index.php?search={{Country}}``` (everything in between the quotation marks). When the card is created, ```{{Country}}``` is replaced with ```Paris```. By setting ```target``` to ```_blank``` we instruct the browser/Anki to open the link in a new tab.
+Here we have a new tag ```<a>``` which is an anchor. This anchor can link to a website (or file, etc.) when the ```href``` attribute is set. In this case, this attribute is set to ```https://en.wikipedia.org/w/index.php?search={{Country}}``` (everything in between the quotation marks). When the card is created, ```{{Country}}``` is replaced with ```France```. By setting ```target``` to ```_blank``` we instruct the browser/Anki to open the link in a new tab.
 {% endraw %}
 
 *Note:* you can only use fields inside attributes, when they are a single line of text. If you for instance put an image in a field, Anki will create some HTML. This HTML code is then placed in this attribute, creating some weird end results.
@@ -126,7 +126,7 @@ Some other tags with attributes are:
 
 There are also some attributes which are more important for styling and scripting purposes. These attributes can be applied to (almost) all elements and include:
 
-- ```class="name"```, where ```name``` can be shared with multiple elements. A element can have multiple classes, separated by spaces. More on that in the CSS tutorial.
+- ```class="name"```, where ```name``` can be shared with multiple elements. An element can have multiple classes, separated by spaces. More on that in the CSS tutorial.
 - ```id="id"```, where ```id``` has to be unique (it can be a combination of letters, numbers, underscores, etc.)
 
 ### Special characters
@@ -153,3 +153,4 @@ And please don't hesitate to contact me via the comments below if you have any q
 - [Another post about custom hints in Anki]({% post_url 2018-04-28-Adding-Hint-fields-in-Anki %})
 - [Official list of special characters (entities)](https://dev.w3.org/html5/html-author/charref){:target="_blank"}
 - [Text style tags on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics){:target="_blank"}
+- [Introduction to CSS]({% post_url 2018-10-14-Anki-Templates-Introduction-CSS %})
