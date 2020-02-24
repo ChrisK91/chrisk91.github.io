@@ -153,4 +153,4 @@ And please don't hesitate to contact me via the comments below if you have any q
 - [Another post about custom hints in Anki]({% post_url 2018-04-28-Adding-Hint-fields-in-Anki %})
 - [Official list of special characters (entities)](https://dev.w3.org/html5/html-author/charref){:target="_blank"}
 - [Text style tags on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics){:target="_blank"}
-- [Introduction to CSS]({% post_url 2018-10-14-Anki-Templates-Introduction-CSS %})
+{% comment %}- [Introduction to CSS]({% post_url 2018-10-14-Anki-Templates-Introduction-CSS %}){% endcomment %}
