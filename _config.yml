@@ -43,3 +43,6 @@ plugins:
 
 paginate: 5
 paginate_path: "/posts/page:num/"
+
+include:
+ - app-ads.txt
