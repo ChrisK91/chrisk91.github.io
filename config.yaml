@@ -16,3 +16,13 @@ menu:
     pre: <i class='fa fa-road'></i>
     url: /getting-started/
     weight: -100
+
+params:
+  otherSites:
+    - url: https://christian-j.com/
+      title: christian-j.com
+      description: My second website where I write about photography-related topics. These topics are more separate than the technical posts on this page, so I wanted to group them a bit more.
+    - url: https://medist.org/
+      title: medist.org
+      description: Checklists and calculators related to medicine can be found here. In a sense, these are stuff I collect during work, and that I write and publish to the web using static site generation.
+      

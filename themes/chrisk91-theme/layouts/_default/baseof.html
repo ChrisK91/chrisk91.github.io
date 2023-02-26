@@ -5,11 +5,9 @@
 <body class="bg-bluedark max-w-full lg:max-w-[80%] mx-auto">
     <div class="">
         {{- partial "header.html" . -}}
-        <div class="bg-white p-2 md:p-8 mt-4 shadow-lg mb-8">
-            <div class="prose lg:prose-xl" id="content">
-                {{- block "main" . }}{{- end }}
-            </div>
-        </div>
+
+        {{- block "main" . }}{{- end }}
+
         {{- partial "footer.html" . -}}
     </div>
 </body>

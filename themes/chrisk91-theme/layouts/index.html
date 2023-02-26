@@ -1,3 +1,54 @@
 {{ define "main" }}
-{{ .Content }}
+<div class="grid grid-cols-1 gap-0 gap-1 mt-2 md:gap-2 lg:gap-4 md:grid-cols-3 md:mt-4">
+
+    <div class="col-span-1 p-2 bg-white shadow-lg md:col-span-2 md:p-8">
+        <div class="prose lg:prose-xl" id="content">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </div>
+    </div>
+
+    <div class="p-2 bg-white shadow-lg md:p-8">
+        <div class="prose lg:prose-xl">
+            <h1>Links</h1>
+        </div>
+
+        <ul class="mt-4 space-y-2">
+            {{ range $site := $.Site.Params.otherSites}}
+            <li>
+                <a href="{{ $site.url }}" class="block h-full p-4 transition hover:bg-orange bg-bluemedium text-lightgreen hover:text-bluedark">
+                    <strong class="text-sm font-bold text-white uppercase lg:text-base">{{ $site.title }}</strong>
+
+                    <p class="mt-1 text-xs font-medium lg:text-sm">{{ $site.description }}</p>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+
+    </div>
+
+    <div class="col-span-1 p-2 bg-white shadow-lg md:col-span-3 md:p-8">
+        <div class="prose lg:prose-xl">
+            <h1>Posts</h1>
+        </div>
+
+        <ul class="grid grid-cols-4 gap-2">
+        {{ range $post := (where .Site.RegularPages "Type" "post") }}
+            <li>
+                <a class="block p-4 transition bg-lightyellow hover:bg-lightgreen" href="{{ $post.Permalink }}">
+                    <time datetime="{{ $post.Date }}" class="block text-xs text-bluemedium">
+                        {{ $post.Date }}
+                        <!-- ToDo: Ensure formate is correct -->
+                      </time>
+                    <span class="mt-1 text-lg font-light text-bluedark">{{ $post.Title }}</span>
+
+                    <p class="mt-2 text-sm leading-relaxed text-bluemedium">{{ $post.Summary }}</p>
+                </a>
+            </li>
+        {{ end }}
+        </ul>
+
+    </div>
+
+</div>
 {{ end }}
