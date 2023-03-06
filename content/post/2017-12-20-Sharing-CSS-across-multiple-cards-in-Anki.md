@@ -1,5 +1,5 @@
 ---
-blurb: Tired of copying and pasting various CSS snippets across multiple cards? By
+summary: Tired of copying and pasting various CSS snippets across multiple cards? By
   using the CSS `@include`, you can share the same CSS file across multiple cards.
 comments: true
 date: "2017-12-20T00:00:00Z"

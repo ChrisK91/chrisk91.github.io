@@ -10,6 +10,7 @@ keypoints: |
 keywords: jekyll pagination, github pagination, foundation
 tags:
 - Jekyll
+- Static Site Generation
 title: Pagination with Jekyll and Foundation Sites 6
 ---
 

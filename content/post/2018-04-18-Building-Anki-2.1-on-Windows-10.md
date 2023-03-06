@@ -1,5 +1,5 @@
 ---
-blurb: Anki 2.1 is the upcoming version of the popular spaced repetition software.
+summary: Anki 2.1 is the upcoming version of the popular spaced repetition software.
   If you want to write plugins, you might want to have the option to run Anki 2.1
   from source for debugging purposes. Here I will outline, how I set up my system
   to build and run Anki from source.

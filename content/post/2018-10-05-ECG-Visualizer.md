@@ -1,5 +1,5 @@
 ---
-blurb: I've created a small webapp to visualize, how the angle of the main electrical
+summary: I've created a small webapp to visualize, how the angle of the main electrical
   axis influences the three main leads I, II and III.
 comments: true
 date: "2018-10-05T00:00:00Z"

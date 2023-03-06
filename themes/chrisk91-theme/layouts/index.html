@@ -4,7 +4,7 @@
     <div class="col-span-1 p-2 bg-white shadow-lg md:col-span-2 md:p-8">
         <div class="prose lg:prose-xl" id="content">
             <h1>{{ .Title }}</h1>
-            {{ .Content }}
+            <p>{{ .Content }}</p>
         </div>
     </div>
 
@@ -32,22 +32,7 @@
             <h1>Posts</h1>
         </div>
 
-        <ul class="grid grid-cols-4 gap-2">
-        {{ range $post := (where .Site.RegularPages "Type" "post") }}
-            <li>
-                <a class="block p-4 transition bg-lightyellow hover:bg-lightgreen" href="{{ $post.Permalink }}">
-                    <time datetime="{{ $post.Date }}" class="block text-xs text-bluemedium">
-                        {{ $post.Date }}
-                        <!-- ToDo: Ensure formate is correct -->
-                      </time>
-                    <span class="mt-1 text-lg font-light text-bluedark">{{ $post.Title }}</span>
-
-                    <p class="mt-2 text-sm leading-relaxed text-bluemedium">{{ $post.Summary }}</p>
-                </a>
-            </li>
-        {{ end }}
-        </ul>
-
+        {{ partial "postmosaic.html" (where .Site.RegularPages "Type" "post") }}
     </div>
 
 </div>

@@ -1,5 +1,5 @@
 ---
-blurb: I've always wanted to create a "base"-style for Anki. Several elements (for
+summary: I've always wanted to create a "base"-style for Anki. Several elements (for
   instance lists) don't look that great in Anki, and I have created a small CSS to
   rectify that.
 comments: true

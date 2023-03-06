@@ -1,5 +1,5 @@
 ---
-blurb: With my graduation last year, I've started a page, to create a tidied collection
+summary: With my graduation last year, I've started a page, to create a tidied collection
   of my current notes. As with my personal page, it is based on Hugo, which I find
   a bit more flexible to work with in comparison to Jekyll. If you're interested in
   the technical stuff, this post is for you!

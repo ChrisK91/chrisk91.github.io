@@ -1,5 +1,5 @@
 ---
-blurb: I recently got a new Canon camera, and was missing a simple app to transfer
+summary: I recently got a new Canon camera, and was missing a simple app to transfer
   files to my Windows 10 devices. So I created one!
 comments: true
 date: "2019-04-05T00:00:00Z"

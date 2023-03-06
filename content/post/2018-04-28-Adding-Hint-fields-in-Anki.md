@@ -1,5 +1,5 @@
 ---
-blurb: Ever wondered how you can add a hint in Anki, for the time when you just can't
+summary: Ever wondered how you can add a hint in Anki, for the time when you just can't
   remember an answer? It's rather simple with some basic CSS and JavaScript
 comments: true
 date: "2018-04-28T00:00:00Z"

@@ -2,6 +2,7 @@
 layout: single_column
 title: about me
 menu: main
+weight: 999
 aliases:
     - /pages/about.html
 ---

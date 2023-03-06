@@ -1,5 +1,5 @@
 ---
-blurb: With my adventures into landscape photography, I've created a second homepage
+summary: With my adventures into landscape photography, I've created a second homepage
   for my new hobby. Here are some technical aspects about the site, which you can
   find at <a href="https://christian-j.com" target="_blank">christian-j.com</a>
 comments: true

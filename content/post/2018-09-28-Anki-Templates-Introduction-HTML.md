@@ -1,5 +1,5 @@
 ---
-blurb: Anki utilizes HTML in its template engine. HTML is quite easy to pick up, and
+summary: Anki utilizes HTML in its template engine. HTML is quite easy to pick up, and
   a basic understanding will get you started in improving your Anki templates right
   away!
 comments: true

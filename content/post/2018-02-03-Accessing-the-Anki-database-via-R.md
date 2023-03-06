@@ -1,5 +1,5 @@
 ---
-blurb: Anki uses a SQLite database to keep track of your reviews and cards. I always
+summary: Anki uses a SQLite database to keep track of your reviews and cards. I always
   wanted to use R to create some graphs and visualize my learning process. Here is
   some code, to get you started as well!
 comments: true

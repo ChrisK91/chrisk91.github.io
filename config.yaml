@@ -3,6 +3,7 @@ disablePathToLower: true
 languageCode: en-us
 title: My New Hugo Site
 theme: chrisk91-theme
+disqusShortname: http-chrisk91-me
 
 menu:
   main:

@@ -1,0 +1,10 @@
+<div class="flex flex-col p-2 md:shadow-lg bg-bluemedium/10 border border-bluemedium/20">
+    {{ if .IsNamedParams }}
+    <img src="{{ .Get "src" }}" alt="">
+    {{ else }}
+    <img src="{{ .Get 0 }}" alt="">
+    {{ end }}
+    
+    <p class="mt-2 text-base text-bluedark">{{ .Inner }}</p>
+    
+</div>

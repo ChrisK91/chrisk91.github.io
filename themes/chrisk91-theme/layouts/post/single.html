@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div
+    class="p-2 md:pt-16 xl:pt-32 md:pl-8 xl:pl-32 2xl:pl-48 mt-4 mb-8 bg-white shadow-lg md:p-8 prose-p:font-serif prose-code:bg-bluemedium prose-code:text-white prose-code:px-1 prose-code:py-1 prose-code:rounded prose-code:select-all prose-code:font-mono prose-code:font-light prose-code:text-sm">
+    <div class="prose lg:prose-xl" id="content">
+        <h1 class="mb-0 lg:mb-1">{{ .Title }}</h1>
+
+        <div class="not-prose">
+        {{ with .Params.tags }}
+            {{ partial "taglist.html" .}}
+        {{ end }}
+        </div>
+
+        <small class="text-bluemedium text-sm font-bold font-sans">Posted on {{ .Date.Format "January 2, 2006" }} |
+            Reading time {{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}</small>
+        {{ .Content }}
+    </div>
+</div>
+
+{{ if isset .Params "comments"}}
+{{ if .Params.Comments }}
+<div class="p-2 mt-4 mb-8 bg-white shadow-lg md:p-8">
+    <div class="prose lg:prose-xl mb-2" id="content">
+        <h1>Comments</h1>
+    </div>
+    {{ template "_internal/disqus.html" . }}
+</div>
+{{ end }}
+{{ end }}
+
+{{ end }}

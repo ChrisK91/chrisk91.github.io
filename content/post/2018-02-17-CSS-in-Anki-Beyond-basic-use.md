@@ -1,5 +1,5 @@
 ---
-blurb: You can style your cards in Anki with CSS, that's nothing new. But we can also
+summary: You can style your cards in Anki with CSS, that's nothing new. But we can also
   use some not so obvious CSS to add visual cues to help us remember stuff on our
   cards.
 comments: true

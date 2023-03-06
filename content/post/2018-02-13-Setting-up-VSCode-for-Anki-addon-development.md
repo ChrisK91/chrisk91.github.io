@@ -1,5 +1,5 @@
 ---
-blurb: VSCode has become a powerful editor for Python. Here I share my setup, to develop
+summary: VSCode has become a powerful editor for Python. Here I share my setup, to develop
   Anki addons using VSCode.
 comments: true
 date: "2018-02-13T00:00:00Z"
