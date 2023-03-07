@@ -1,0 +1,2 @@
+- Use <picture> for images
+- Implement processing to webp for images

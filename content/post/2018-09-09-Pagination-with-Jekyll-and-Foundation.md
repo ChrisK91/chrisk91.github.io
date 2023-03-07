@@ -12,51 +12,48 @@ tags:
 - Jekyll
 - Static Site Generation
 title: Pagination with Jekyll and Foundation Sites 6
+aliases:
+    - /2018/09/09/Pagination-with-Jekyll-and-Foundation.html
+outline: true
 ---
 
 ## Prerequisites
-This posts assumes, that you already have a site running. It's also a good idea to run ```bundle update```, to get your dependencies up to date. I will utilize the [jekyll pagination plugin](https://jekyllrb.com/docs/pagination/){:target="_blank"} which is available on GitHub pages, so you don't need to build your site locally.
 
-*Important:* the plugin only works when your posts are listed on your ```index.html``` page, this is a restriction of GitHub pages, which bundles [jekyll-paginate in version 1.1.0](https://pages.github.com/versions/){:target="_blank"} at the time of writing.
+This post assumes, that you already have a site running. It's also a good idea to run ```bundle update```, to get your dependencies up to date. I will utilize the [Jekyll pagination plugin](https://jekyllrb.com/docs/pagination/) which is available on GitHub pages, so you don't need to build your site locally.
 
-<div class="grid-x align-center text-center">
-    <div class="cell large-6">
-        <div class="card">
-            <img src="/images/pagination/control.png">
-            <div class="sub card-section">The glorious pagination control we will create</div>
-        </div>
-    </div>
-</div>
+*Important:* the plugin only works when your posts are listed on your ```index.html``` page, this is a restriction of GitHub pages, which bundles [jekyll-paginate in version 1.1.0](https://pages.github.com/versions/) at the time of writing.
+
+{{< fig src="/images/pagination/control.png" >}}The glorious pagination control we will create{{< /fig >}}
 
 ## Configuration
+
 In your ```_config.yml```, add the pagination plugin and configure it, for instance with the code below:
 
-<pre><code>plugins:
+{{< code lang="yaml" filename="_config.yml" >}}plugins:
   # Other plugins go here
  - jekyll-paginate
 
 paginate: 5
-paginate_path: "/posts/page:num/"</code></pre>
+paginate_path: "/posts/page:num/"{{< /code >}}
 
-- The entry under ```plugins``` simply loads the plugin. If you get any errors when building your page, makre sure your ```gemfile``` contains ```gem "github-pages", group: :jekyll_plugins``` and rerun ```bundle install```
+- The entry under ```plugins``` simply loads the plugin. If you get any errors when building your page, make sure your ```gemfile``` contains ```gem "github-pages", group: :jekyll_plugins``` and rerun ```bundle install```
 - ```paginate``` sets the number of pages to display on one page
 - ```paginate_path``` specifies where the page files will be located. The first page will always be ```index.html```, subsequent files will be in this case ```/posts/page1/```, ```/posts/page2/```, ```/posts/page3/```, and so on.
 
-See the [official documentation](https://jekyllrb.com/docs/pagination/){:target="_blank"} for more details about these options.
+See the [official documentation](https://jekyllrb.com/docs/pagination/) for more details about these options.
 
-## The includable paginator element
-{% raw %}
+## The *paginator*-element
+
 Create the file ```_includes/paginator.html```. Files in this directory can be included via ```{% include paginator.html %}```, so you don't need to have the same code twice, if you want to place the controls above and below your posts. The code for this file is as follows:
 
-<pre><code>
-{% if paginator.total_pages > 1 %}
-&lt;div class="pagination"&gt;
-    &lt;nav aria-label="Pagination"&gt;
-        &lt;ul class="pagination text-center"&gt;
+{{< code lang="html" filename="_includes/paginator.html" >}}{% if paginator.total_pages > 1 %}
+<div class="pagination">
+    <nav aria-label="Pagination">
+        <ul class="pagination text-center">
         {% if paginator.previous_page %}
-        &lt;li class="pagination-previous"&gt;&lt;a href="{{ paginator.previous_page_path }}"&gt;Previous&lt;/a&gt;&lt;/li&gt;
+        <li class="pagination-previous"><a href="{{ paginator.previous_page_path }}">Previous</a></li>
         {% else %}
-        &lt;li class="pagination-previous disabled"&gt;Previous&lt;/li&gt;
+        <li class="pagination-previous disabled">Previous</li>
         {% endif %}
 
         {% for counter in (1..paginator.total_pages) %}
@@ -66,30 +63,29 @@ Create the file ```_includes/paginator.html```. Files in this directory can be i
 
             {% if counter == 1%}
                 {% if counter == paginator.page %}
-                &lt;li class="current"&gt;{{ counter }}&lt;/li&gt;
+                <li class="current">{{ counter }}</li>
                 {% else %}
-                &lt;li&gt;&lt;a href="/"&gt;{{ counter }}&lt;/a&gt;&lt;/li&gt;
+                <li><a href="/">{{ counter }}</a></li>
                 {% endif %}
             {% else %}
                 {% if counter == paginator.page %}
-                &lt;li class="current"&gt;{{ counter }}&lt;/li&gt;
+                <li class="current">{{ counter }}</li>
                 {% else %}
-                &lt;li&gt;&lt;a href="/posts/page{{ counter }}"&gt;{{ counter }}&lt;/a&gt;&lt;/li&gt;
+                <li><a href="/posts/page{{ counter }}">{{ counter }}</a></li>
                 {% endif %}
             {% endif %}
 
         {% endfor %}
 
         {% if paginator.next_page %}
-        &lt;li class="pagination-next"&gt;&lt;a href="{{ paginator.next_page_path }}"&gt;Next&lt;/a&gt;&lt;/li&gt;
+        <li class="pagination-next"><a href="{{ paginator.next_page_path }}">Next</a></li>
         {% else %}
-        &lt;li class="pagination-next disabled"&gt;Next&lt;/li&gt;
+        <li class="pagination-next disabled">Next</li>
         {% endif %}
-        &lt;/ul&gt;
-    &lt;/nav&gt;
-&lt;/div&gt;
-{% endif %}</code></pre>
-{% endraw %}
+        </ul>
+    </nav>
+</div>
+{% endif %}{{< /code >}}
 
 This code will create the control only, if there are actually multiple pages. The appropriate CSS classes are applied for the current page, as well as all the other elements. The edge case for the first page, which is just ```index.html``` instead of ```/posts/page1```.
 
@@ -99,29 +95,35 @@ This code will create the control only, if there are actually multiple pages. Th
 
 Your ```index.html``` has most likely something like the following to display your posts:
 
-{% raw %}
-<pre><code>{% for post in site.posts %}
+{{< code lang="html" filename="pseudocode that displays posts without pagination" >}}{% for post in site.posts %}
     # HTML code to display each post
-{ % endfor %}</code></pre>
-{% endraw %}
+{ % endfor %}{{< /code >}}
 
 This needs to be adjusted slightly, and the ```paginator.html``` needs to be included:
 
-{% raw %}
+
 <pre><code>{% for post in paginator.posts %}
     # HTML code to display each post
 { % endfor %}
 
 {% include paginator.html %}</code></pre>
-{% endraw %}
+
+{{< code lang="html" filename="display paginated posts" >}}{% for post in paginator.posts %}
+    # HTML code to display each post
+{ % endfor %}
+
+{% include paginator.html %}{{< /code >}}
 
 ## Conclusion
-The code in this post is in the public domain (see below), so feel free to reuse it. This pagination control is easy to implement on GitHub pages. If you need more advanced features, there is [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2){:target="_blank"} which is also backwards compatible. The plugin there unfortunately is not supported on GitHub pages, so you'll need to set up continuous integration, for instance with Travis in order to use it.
+
+The code in this post is in the public domain (see below), so feel free to reuse it. This pagination control is easy to implement on GitHub pages. If you need more advanced features, there is [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2) which is also backwards compatible. The plugin there unfortunately is not supported on GitHub pages, so you'll need to set up continuous integration, for instance with Travis in order to use it.
 
 If you reuse the code, I'd appreciate a ping back in the comments, but this is not required.
 
-#### License for code in this post
-<pre>This is free and unencumbered software released into the public domain.
+## License for the paginate element in this post
+
+{{< code lang="txt" filename="license for the pagination element presented here" >}}
+This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
 distribute this software, either in source code form or as a compiled
@@ -144,4 +146,4 @@ OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-For more information, please refer to <http://unlicense.org></pre>
+For more information, please refer to <http://unlicense.org>{{< /code >}}

@@ -1,0 +1,11 @@
+<div class="not-prose font-mono max-w-full text-sm bg-bluemedium border-2 border-bluemedium shadow-lg my-4 hover:border-orange hover:bg-orange transition">
+    <div class="overflow-x-scroll py-1 bg-codebg">
+        {{ $input := (.Inner) }}
+        {{ transform.Highlight $input (.Get "lang") "lineNos=table, style=nord" }}
+    </div>
+    {{ with .Get "filename" }}
+    <div class="not-prose w-full text-white py-1 px-2">
+        {{ . }}
+    </div>
+    {{ end }}
+</div>

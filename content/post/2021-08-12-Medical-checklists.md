@@ -9,6 +9,8 @@ keywords: jekyll pagination, github pagination, foundation
 tags:
 - personal
 title: My collection of medical calculators and checklists - medist.org
+aliases:
+  - /2021/08/12/Medical-checklists.html
 ---
 
 I've now been working for over 1,5 years as a doctor... Well, it's still a bit weird to say it like that. But with practicing, I've become a less regular user of Anki. Depending on schedule, it's difficult to finish your cards every day. Since I've started working, I've always carried a small notebook with me. In there, I scribble down small things throughout the day. In the evenings or on the weekend, I clean them up and put them in a Word document.
@@ -19,12 +21,12 @@ I've never been really creative with names, so I just took the first domain that
 
 ## Technical aspects
 
-The site itsels is built with Hugo. With new projects, I try to incorporate a few things for me to learn. I was already a bit familiar with Hugo, but this time I wanted to start from the ground up. Starting with the naked tailwind based [theme from @dirkolbrich](https://github.com/dirkolbrich/hugo-theme-tailwindcss-starter){:target="_blank"}, I've modified slightly and added bilangual support.
+The site itself is built with Hugo. With new projects, I try to incorporate a few things for me to learn. I was already a bit familiar with Hugo, but this time I wanted to start from the ground up. Starting with the naked tailwind based [theme from @dirkolbrich](https://github.com/dirkolbrich/hugo-theme-tailwindcss-starter){:target="_blank"}, I've modified slightly and added bilingual support.
 
 Thanks to the new GitHub Actions, there is now an action to build a Hugo page, without relying on third party services.
 
 The page itself is hosted on GitHub pages, and the code-behind-repository is publicly available via [@ChrisK91/Checklists](https://github.com/chrisk91/checklists){:target="_blank"}.
 
-There are a few calculators, which are based on Vue.js (since I don't really know about the new js stuff). But they work, and that's enough for me. The site itself is fully static, since I wanted to package it as a web app, so it works without internet connectivity. But so far I didn't have too much luck with that... Especially offline caching makes this difficult.
+There are a few calculators, which are based on Vue.js (since I don't really know about the new JavaScript stuff). But they work, and that's enough for me. The site itself is fully static, since I wanted to package it as a web app, so it works without internet connectivity. But so far I didn't have too much luck with that... Especially offline caching makes this difficult.
 
-If you're interested in the new page, head over to [medist.org](https://medist.org){:target="_blank"}, and have a look around. I'm looking forward to see you there!
+If you're interested in the new page, head over to [medist.org](https://medist.org), and have a look around. I'm looking forward to seeing you there!

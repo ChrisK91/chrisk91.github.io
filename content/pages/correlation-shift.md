@@ -1,21 +1,21 @@
 ---
 layout: single_column
 title: correlation shift
+url: /tools/correlation-shift.html
+menu:
+    main:
+        weight: 1001
+        name: Correlation Shift
 ---
 You can use this tool to maximize the correlation of two images. This can be useful if you experience a certain shift when switching channels. The program calculates the Pearson Product-Moment coefficient and determines to offset where it reaches its maximum. Especially if features are present with the same intensity in both channels, they tend to be aligned very well.
 
-<a href="https://github.com/ChrisK91/Correlation-Shift/releases" target="_blank" class="expanded small button"> Download</a>
-*Select x64 (64bit) or x86 (32bit) depending on your architecture*
+> [**Download**](https://github.com/ChrisK91/Correlation-Shift/releases)
+>
+> *Select x64 (64bit) or x86 (32bit) depending on your architecture*
 
-<span class="sub">This tool is released under the MIT license. Feel free to copy and redistribute it.</span>
+This tool is released under the MIT license. Feel free to copy and redistribute it.
 
-<div class="grid-x align-center">
-    <div class="cell large-10">
-        <div class="card">
-            <img src="/images/tools/correlation-shift.png" />
-        </div>
-    </div>
-</div>
+{{< fig src="/images/tools/correlation-shift.png" >}}Correlation Shift can be used to align images based on their correlation coefficient.{{< /fig >}}
 
 ### Notes
 
@@ -35,7 +35,6 @@ You can use this tool to maximize the correlation of two images. This can be use
 ### Settings
 
 You can access the configuration file via *About &rarr; Open application folder*. Right click the *configuration.xml* file and open with notepad. The following options are available:
-
 
 `MinX` and `MinY`: The minimum offset along the X/Y axis in pixel, default `-20`
 

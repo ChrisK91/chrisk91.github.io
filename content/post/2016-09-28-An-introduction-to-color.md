@@ -15,6 +15,9 @@ tags:
 - Color
 - ImageJ Basics
 title: An introduction to color
+outline: true
+aliases:
+    - /2016/09/28/An-introduction-to-color.html
 ---
 
 ## What are color spaces?
@@ -88,7 +91,7 @@ You should also think about these models when you try to select features on a co
 
 ----
 
-#### Image sources
+## Image sources
 
 The images used are in the public domain, the originals can be found via the links below:
 

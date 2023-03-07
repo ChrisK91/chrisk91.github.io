@@ -1,17 +1,44 @@
 {{ define "main" }}
+{{ if isset .Params "outline"}}
+{{ if .Params.outline}}
+<aside
+    class="sticky right-0 top-0 invisible xl:visible float-right mt-12 mr-2 2xl:mr-28 2xl:mt-24 bg-white/20 backdrop-blur pl-1.5">
+    <h5 class="font-bold text-bluedark text-lg 2xl:text-4xl 2xl:font-extrabold pt-3 pb-2">Outline</h5>
+    <ul class="toc">
+        <li><a href="#top-of-article">Back to top</a></li>
+    </ul>
+    {{ .TableOfContents }}
+</aside>
+{{ end }}
+{{ end }}
+
 <div
     class="p-2 md:pt-16 xl:pt-32 md:pl-8 xl:pl-32 2xl:pl-48 mt-4 mb-8 bg-white shadow-lg md:p-8 prose-p:font-serif prose-code:bg-bluemedium prose-code:text-white prose-code:px-1 prose-code:py-1 prose-code:rounded prose-code:select-all prose-code:font-mono prose-code:font-light prose-code:text-sm">
     <div class="prose lg:prose-xl" id="content">
-        <h1 class="mb-0 lg:mb-1">{{ .Title }}</h1>
+        <h1 class="mb-0 lg:mb-1" id="top-of-article">{{ .Title }}</h1>
 
         <div class="not-prose">
-        {{ with .Params.tags }}
+            {{ with .Params.tags }}
             {{ partial "taglist.html" .}}
-        {{ end }}
+            {{ end }}
         </div>
 
         <small class="text-bluemedium text-sm font-bold font-sans">Posted on {{ .Date.Format "January 2, 2006" }} |
-            Reading time {{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}</small>
+            Reading time {{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}</small><br />
+
+
+        {{ if isset .Params "keypoints"}}
+        <div class="not-prose flex w-full border border-lightgreen bg-lightyellow shadow-lg mt-2">
+            <div
+                class="bg-lightgreen rotate-180 [writing-mode:_vertical-lr] p-2 font-extrabold text-bluedark text-lg uppercase tracking-wide">
+                key points</div>
+            <div class="p-2 keypoints place-self-center">
+                {{ .Params.keypoints | markdownify }}
+
+            </div>
+        </div>
+        {{ end }}
+
         {{ .Content }}
     </div>
 </div>

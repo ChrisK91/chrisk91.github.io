@@ -12,10 +12,13 @@ tags:
 - Anki
 - CSS
 title: Basic CSS-Template for Anki
+aliases:
+    - /2018/09/19/Basic-CSS-Template-for-Anki.html
+menu:
+    main:
+        weight: 1000
+        name: Anki CSS Template
 ---
-{% comment %}
-NOTE: Update index.html when updating this post!!!!
-{% endcomment %}
 
 ## Motivation
 
@@ -25,53 +28,31 @@ The basic Anki template just centers text. It leaves background, lists, code sni
 - On large screens, the content "stays" in the center
 - Code listings and lists are aligned to the left, so that indentation becomes useful again
 - Support for blockquote, code, pre and hr tags
-- Support for the [night mode add-on](https://ankiweb.net/shared/info/1496166067){:target="_blank"}
+- Support for the [night mode add-on](https://ankiweb.net/shared/info/1496166067)
 - *Support for vanilla card templates without altering the HTML code*
 
 Do you have *feature requests, feedback or questions*? Leave them in the comments at the end of the page
 
 ### Screenshots
 
-<div class="grid-x align-center text-center grid-padding-x">
-    <div class="cell large-6">
-        <div class="card">
-            <img src="/images/anki_css_style/normal.png">
-            <div class="sub card-section">Normal mode</div>
-        </div>
-    </div>
-    <div class="cell large-6">
-        <div class="card">
-            <img src="/images/anki_css_style/night_mode.png">
-            <div class="sub card-section">Night mode with the night mode plugin</div>
-        </div>
-    </div>
-</div>
+{{< figgrid cols="2" >}}
+{{< gridfig src="/images/anki_css_style/normal.png" >}}Normal mode{{< /gridfig >}}
+{{< gridfig src="/images/anki_css_style/night_mode.png" >}}Night mode with the night mode plugin{{< /gridfig >}}
+{{< /figgrid >}}
 
-<div class="grid-x align-center text-center grid-padding-x">
-    <div class="cell large-12">
-        <div class="card">
-            <img src="/images/anki_css_style/normal_wide.png">
-            <div class="sub card-section">Wide mode on a large screen</div>
-        </div>
-    </div>
-</div>
+&nbsp;
+
+{{< fig src="/images/anki_css_style/normal_wide.png" >}}Wide mode on a large screen{{< /fig >}}
 
 ## Installation
 
-Head over to the [GitHub Repository](https://github.com/ChrisK91/Universal-Anki-CSS/blob/master/output/_base.css){:target="_blank"} and download the file `output/_base.css` ([direct link](https://raw.githubusercontent.com/ChrisK91/Universal-Anki-CSS/master/output/_base.css){:target="_blank"}), and place it in your `collection.media`-folder.
+Head over to the [GitHub Repository](https://github.com/ChrisK91/Universal-Anki-CSS/blob/master/output/_base.css) and download the file `output/_base.css` ([direct link](https://raw.githubusercontent.com/ChrisK91/Universal-Anki-CSS/master/output/_base.css)), and place it in your `collection.media`-folder.
 
-<div class="grid-x align-center text-center">
-    <div class="cell large-6">
-        <div class="card">
-            <img src="/images/anki_css_style/cards_button.png">
-            <div class="sub card-section">A small change has to be made to load the CSS file</div>
-        </div>
-    </div>
-</div>
+{{< fig src="/images/anki_css_style/cards_button.png" >}}A small change has to be made to load the CSS file{{< /fig >}}
 
 Now, inside Anki, open the card editor, and click the *Cards* button. Replace/Insert ```@import url("_base.css");``` into the *Styling* field, and the template will load right away.
 
-To add lists and "advanced" elements in Anki, you'll need an add on, for instance [Mini Format Pack](https://ankiweb.net/shared/info/295889520){:target="_blank"}.
+To add lists and "advanced" elements in Anki, you'll need an add-on, for instance [Mini Format Pack](https://ankiweb.net/shared/info/295889520).
 
 ## Planned features
 
@@ -79,4 +60,4 @@ To add lists and "advanced" elements in Anki, you'll need an add on, for instanc
 - Restyle inputs/`type`-fields
 - Styles for images/audio
 
-If you have feature requests, that might also be useful for others, please don't hesitate to contact (for instance via the comments below)
+If you have feature requests, that might also be useful for others, please don't hesitate to contact (for instance via the comments below).

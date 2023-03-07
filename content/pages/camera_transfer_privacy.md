@@ -1,6 +1,7 @@
 ---
 layout: single_column
 title: Privacy policy for Camera Transfer
+url: /pages/camera_transfer_privacy.html
 ---
 
 *English version below*

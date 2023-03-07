@@ -11,6 +11,9 @@ tags:
 - Color
 - ImageJ
 title: Hands on — Color models and ImageJ
+outline: true
+aliases:
+  - /2016/10/05/Hands-on-Color-models-and-ImageJ.html
 ---
 
 ## Setup
@@ -26,7 +29,7 @@ Let's assume that we are interested in the darker cells, and want to select them
 
 {{<fig src="/images/color_models_blood/screenshots/split_image.jpg">}}The label of the current slice (yellow) displays the channel that is currently displayed. You can navigate to the other slices with the scroll bar (blue){{</fig>}}
 
-## Identifying the channels of interest
+### Identifying the channels of interest
 
 Now, lets think about what we are actually looking for here. We want information, that tells apart the originally purple cells from the rest of the image. So we check, if one (or more channels) depicts these cells very bright and the background very dark (or vice versa) --- in other words: *we are interested in a slice with large contrast between our feature of interest and the remaining area of the image*. Which channels would you pick?
 
@@ -39,7 +42,7 @@ Now, lets think about what we are actually looking for here. We want information
 
 The red channel seems to display our cells really well, while the red blood cells remain more pale here. The green channel appears similar, although the erythrocytes appear  darker here. The last channel --- indicating the intensity of blue --- displays our cells very bright; they almost fade into the white background. *Let's take a mental note: the feature we're interested in seems to stand out in the red and green channel.*
 
-## Recombining the stack and HSV
+### Recombining the stack and HSV
 
 There are two options to change the stack back to the original image:
 
@@ -136,6 +139,6 @@ The result is still not perfect. Depending on your settings we still would need 
 
 {{<fig src="/images/color_models_blood/outlook.png">}}ImageJ contains tools to clean our selection. We can also split the cells and measure them.{{</fig>}}
 
-#### Image sources
+## Image sources
 
 The original image of blood cells (by Mary Ann Thompson) can be found on [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Chronic_lymphocytic_leukemia.jpg) and is licensed under the [CC BY SA](https://creativecommons.org/licenses/by-sa/3.0/deed.en) license.

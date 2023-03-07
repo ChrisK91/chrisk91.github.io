@@ -23,7 +23,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'mono': ['source-sans-pro', ...defaultTheme.fontFamily.mono],
+        'mono': ['calling-code', ...defaultTheme.fontFamily.mono],
         'serif': ['minion-pro-display', ...defaultTheme.fontFamily.serif],
         'sans': ['futura-pt', ...defaultTheme.fontFamily.sans],
       },
@@ -31,7 +31,9 @@ module.exports = {
         DEFAULT: {
           css: {
             'code::before': { content : ''},
-            'code::after': { content : ''} 
+            'code::after': { content : ''},
+            'blockquote p:first-of-type::before': { content: ''}, 
+            'blockquote p:last-of-type::after': { content: ''}
           }
         }
       }
@@ -44,7 +46,8 @@ module.exports = {
       bluemedium: "#214457",
       lightgreen: "#9CCBB2",
       lightyellow: "#F0D69B",
-      orange: "#DB5A35"
+      orange: "#DB5A35",
+      codebg: "#2e3440",
     },
   },
   plugins: [

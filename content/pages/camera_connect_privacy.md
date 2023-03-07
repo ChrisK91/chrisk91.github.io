@@ -1,6 +1,7 @@
 ---
 layout: single_column
 title: Privacy policy for Camera Connect
+url: /pages/camera_connect_privacy.html
 ---
 
 *English version below*
