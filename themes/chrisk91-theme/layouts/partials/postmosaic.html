@@ -1,0 +1,18 @@
+<ul class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-2 mt-4">
+    {{ range $post := . }}
+        <li class="bg-lightyellow hover:bg-lightgreen transition">
+            <a class="block p-4" href="{{ $post.Permalink }}">
+                <time datetime="{{ $post.Date.Format "2020-12-23T15:21:54+05:30" }}" class="block text-xs text-bluemedium">
+                    {{ $post.Date.Format "January 2, 2006" }}
+                  </time>
+                <span class="mt-1 text-lg font-bold text-bluedark">{{ $post.Title }}</span>
+
+                <p class="mt-2 text-sm leading-relaxed text-bluemedium line-clamp-5">{{ $post.Summary }}</p>
+            </a>
+
+            {{ with $post.Params.tags }}
+                {{ partial "taglist.html" .}}
+            {{ end }}
+        </li>
+    {{ end }}
+    </ul>

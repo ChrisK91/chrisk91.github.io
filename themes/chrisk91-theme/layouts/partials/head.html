@@ -1,0 +1,5 @@
+<head>
+    <link rel="stylesheet" href="https://use.typekit.net/wcp3hcc.css">
+    {{ partialCached "css.html" . }}
+    <title>{{ if .IsHome }}Home - {{ else }}{{ if .Page.Title }}{{ .Page.Title }} - {{ end }}{{ end }}{{ .Site.Title }}</title>
+</head>

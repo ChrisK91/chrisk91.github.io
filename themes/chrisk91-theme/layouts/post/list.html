@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="col-span-1 p-2 bg-white shadow-lg md:col-span-3 md:p-8 mt-2 md:mt-4">
+    <div class="prose lg:prose-xl">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    </div>
+
+    {{ partial "postmosaic.html" (where .Site.RegularPages "Type" "post") }}
+</div>
+{{ end }}

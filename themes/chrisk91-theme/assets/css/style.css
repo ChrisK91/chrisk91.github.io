@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    #TableOfContents ul, ul.toc {
+      @apply list-disc marker:text-lightgreen text-sm 2xl:text-base gap-y-3 list-inside;
+    }
+
+    #TableOfContents a, ul.toc a {
+        @apply text-bluedark hover:text-orange transition hover:underline decoration-orange;
+      }
+
+    .keypoints ul {
+        @apply list-disc marker:text-bluemedium text-lg gap-y-3 list-outside pl-2 ml-4 mr-2;
+    }
+  }
