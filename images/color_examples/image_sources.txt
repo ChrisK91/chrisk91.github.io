@@ -1,0 +1,2 @@
+rgb/example: https://www.flickr.com/photos/thadz/11257267733/
+hsv: https://www.flickr.com/photos/mustangjoe/26793374391/
