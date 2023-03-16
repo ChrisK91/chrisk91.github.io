@@ -1,8 +1,8 @@
 <div class="flex flex-col not-prose p-2 md:p-4 xl:p-6 md:shadow-lg bg-bluemedium/10 border border-bluemedium/20 xl:max-w-[80%] mx-auto">
 {{ if .IsNamedParams }}
-<img src="{{ .Get "src" }}" alt="">
+<a href="{{ .Get "src" }}" target="_blank" class="block mx-auto"><img src="{{ .Get "src" }}" alt=""></a>
 {{ else }}
-<img src="{{ .Get 0 }}" alt="">
+<a href="{{ .Get 0 }}" target="_blank" class="block mx-auto"><img src="{{ .Get 0 }}" alt=""></a>
 {{ end }}
 
 <p class="mt-2 text-base text-bluedark">{{ .Inner }}</p>
