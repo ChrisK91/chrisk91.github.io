@@ -4,14 +4,16 @@
 
 @layer components {
     #TableOfContents ul, ul.toc {
-      @apply list-disc marker:text-lightgreen text-sm 2xl:text-base gap-y-3 list-inside;
+      @apply text-sm list-disc list-inside marker:text-lightgreen 2xl:text-base gap-y-3;
     }
 
     #TableOfContents a, ul.toc a {
-        @apply text-bluedark hover:text-orange transition hover:underline decoration-orange;
+        @apply transition text-bluedark hover:text-orange hover:underline decoration-orange;
       }
 
     .keypoints ul {
-        @apply list-disc marker:text-bluemedium text-lg gap-y-3 list-outside pl-2 ml-4 mr-2;
+        @apply pl-2 ml-4 mr-2 text-lg list-disc list-outside marker:text-bluemedium gap-y-3;
     }
+
+    [x-cloak] { display: none !important; }
   }

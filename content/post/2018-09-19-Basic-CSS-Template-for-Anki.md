@@ -15,7 +15,7 @@ title: Basic CSS-Template for Anki
 aliases:
     - /2018/09/19/Basic-CSS-Template-for-Anki.html
 menu:
-    main:
+    tools:
         weight: 1000
         name: Anki CSS Template
 ---

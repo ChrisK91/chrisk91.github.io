@@ -3,7 +3,7 @@ layout: single_column
 title: correlation shift
 url: /tools/correlation-shift.html
 menu:
-    main:
+    tools:
         weight: 1001
         name: Correlation Shift
 ---

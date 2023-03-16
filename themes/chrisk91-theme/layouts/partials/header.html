@@ -2,7 +2,7 @@
     <div class="flex items-end justify-between font-sans text-6xl border-b md:text-9xl border-b-orange">
         <div>
             <a href="/">
-                <span class="font-extrabold text-orange">ChrisK91</span><span
+                <span class="font-medium sm:font-bold md:font-extrabold text-orange">ChrisK91</span><span
                     class="font-light text-lightgreen">.me</span>
             </a>
         </div>
@@ -28,30 +28,76 @@
     </div>
 </div>
 
-<ul class="flex flex-row w-full mt-4 text-2xl font-bold shadow-lg bg-lightgreen justify-center space-x-4">
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-    {{ if .HasChildren }}
-    <li class="{{ if $currentPage.HasMenuCurrent " main" . }}active{{ end }}">
-        <a href="#">
-            {{ .Pre }}
-            <span>{{ .Name }}</span>
-        </a>
-    </li>
-    <ul class="sub-menu">
-        {{ range .Children }}
-        <li class="{{ if $currentPage.IsMenuCurrent " main" . }}active{{ end }}">
-            <a href="{{ .URL }}">{{ .Name }}</a>
+<nav x-data="{toolsOpen : false}">
+    <ul class="flex flex-row justify-center w-full mt-2 space-x-4 text-2xl font-bold shadow-lg md:mt-4 bg-lightgreen">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+        <li class="{{ if $currentPage.HasMenuCurrent " main" . }}active{{ end }}">
+            <a href="#">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+            </a>
+        </li>
+        <ul class="sub-menu">
+            {{ range .Children }}
+            <li class="{{ if $currentPage.IsMenuCurrent " main" . }}active{{ end }}">
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+        </ul>
+        {{ else }}
+        <li>
+            <a href="{{ .URL }}"
+                class="hover:text-bluemedium transition hover:underline {{ if $currentPage.IsMenuCurrent " main" .
+                }}text-bluemedium underline{{ else }}text-bluedark{{ end }}">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+            </a>
         </li>
         {{ end }}
+        {{ end }}
+
+        <li>
+            <button x-on:click="toolsOpen = !toolsOpen" class="text-bluedark hover:text-bluemedium hover:underline">tools <svg class="inline w-4 h-4 transition-transform"
+                    :class="toolsOpen ? 'rotate-180' : 'rotate-0'"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                </svg></label>
+        </li>
     </ul>
-    {{ else }}
-    <li>
-        <a href="{{ .URL }}" class="hover:text-bluemedium transition hover:underline {{ if $currentPage.IsMenuCurrent "main" . }}text-bluemedium underline{{ else }}text-bluedark{{ end }}">
-            {{ .Pre }}
-            <span>{{ .Name }}</span>
-        </a>
-    </li>
-    {{ end }}
-    {{ end }}
-</ul>
+
+
+    <ul id="tools-menu" x-show="toolsOpen" x-cloak x-transition
+        class="flex flex-col justify-center w-full px-2 mt-2 text-2xl font-bold shadow-lg md:space-x-4 md:flex-row md:mt-4 bg-lightyellow">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.tools }}
+        {{ if .HasChildren }}
+        <li class="{{ if $currentPage.HasMenuCurrent " main" . }}active{{ end }}">
+            <a href="#">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+            </a>
+        </li>
+        <ul class="sub-menu">
+            {{ range .Children }}
+            <li class="{{ if $currentPage.IsMenuCurrent " main" . }}active{{ end }}">
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+        </ul>
+        {{ else }}
+        <li>
+            <a href="{{ .URL }}"
+                class="hover:text-bluemedium transition hover:underline {{ if $currentPage.IsMenuCurrent " main" .
+                }}text-bluemedium underline{{ else }}text-bluedark{{ end }}">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+            </a>
+        </li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</nav>

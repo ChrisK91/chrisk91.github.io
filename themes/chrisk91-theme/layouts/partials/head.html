@@ -1,7 +1,8 @@
-<head lang="en">
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://use.typekit.net/wcp3hcc.css">
     {{ partialCached "css.html" . }}
     <title>{{ if .IsHome }}Home - {{ else }}{{ if .Page.Title }}{{ .Page.Title }} - {{ end }}{{ end }}{{ .Site.Title }}</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>

@@ -7,7 +7,7 @@ disqusShortname: http-chrisk91-me
 googleAnalytics: "G-30MHG4HNXJ"
 
 menu:
-  main:
+  tools:
   - name: EKG visualizer
     url: https://chrisk91.me/ekgApp/
     weight: 0
