@@ -49,7 +49,11 @@ PerfuRate ist ausschließlich für die Verwendung durch qualifiziertes medizinis
 
 Wir behalten uns das Recht vor, diese Datenschutzerklärung bei Bedarf zu aktualisieren. Änderungen werden in der App und im Google Play Store veröffentlicht.
 
-## 10. Kontakt
+## 10. Löschen von Daten
+
+Lokale Daten können durch das Entfernen der App gelöscht werden. Eventuell exportierte Daten finden Sie am gewählten Speichertort und müssen ggf. separat gelöscht werden.
+
+## 11. Kontakt
 
 Bei Fragen zu dieser Datenschutzerklärung oder zu PerfuRate kontaktieren Sie uns bitte unter: chrisk91me (at) gmail.com
 
@@ -100,7 +104,11 @@ PerfuRate is intended for use exclusively by qualified medical professionals. Us
 
 We reserve the right to update this privacy policy as needed. Changes will be published in the app and in the Google Play Store.
 
-## 10. Contact
+## 10. Data deletion
+
+You can remove local data by uninstalling the app. If you have exported data, please delete it separately at the chosen location.
+
+## 11. Contact
 
 If you have any questions about this privacy policy or about PerfuRate, please contact us at: chrisk91me (at) gmail.com
 
