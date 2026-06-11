@@ -24,7 +24,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'mono': ['calling-code', ...defaultTheme.fontFamily.mono],
-        'serif': ['minion-pro-display', ...defaultTheme.fontFamily.serif],
+        'serif': ['Domine', ...defaultTheme.fontFamily.serif],
         'sans': ['futura-pt', ...defaultTheme.fontFamily.sans],
       },
       typography: {
