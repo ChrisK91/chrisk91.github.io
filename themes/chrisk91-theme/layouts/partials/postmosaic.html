@@ -7,7 +7,7 @@
                   </time>
                 <span class="mt-1 text-lg font-bold text-bluedark">{{ $post.Title }}</span>
 
-                <p class="mt-2 text-sm leading-relaxed text-bluemedium line-clamp-5">{{ $post.Summary }}</p>
+                <p class="mt-2 text-sm leading-relaxed text-bluemedium line-clamp-5">{{ $post.Summary | plainify }}</p>
             </a>
 
             {{ with $post.Params.tags }}

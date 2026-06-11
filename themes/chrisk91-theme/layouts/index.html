@@ -14,7 +14,7 @@
         </div>
 
         <ul class="mt-4 space-y-2">
-            {{ range $site := $.Site.Params.otherSites}}
+            {{ range $site := $.Site.Params.otherSites }}
             <li>
                 <a href="{{ $site.url }}" class="block h-full p-4 transition hover:bg-orange bg-bluemedium text-lightgreen hover:text-bluedark">
                     <strong class="text-sm font-bold text-white uppercase lg:text-base">{{ $site.title }}</strong>

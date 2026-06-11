@@ -17,7 +17,7 @@ aliases:
 ---
 
 ## Setup
-Now that we've looked at [color spaces and models]({{< ref "/2016-09-28-An-introduction-to-color" >}}) it's time to put that knowledge to use. I will be using [Fiji](http://fiji.sc/) to illustrate these steps. We will use the image below (from Mary Ann Thompson) as an example. The original is available (in higher resolution) on [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Chronic_lymphocytic_leukemia.jpg). Just do a right click and select *copy* on the image below. You can then paste it in ImageJ via *Edit &rarr; Paste* (or {{<kbd>}}Ctrl + V{{</kbd>}}).
+Now that we've looked at [color spaces and models]({{< ref "2016-09-28-An-introduction-to-color" >}}) it's time to put that knowledge to use. I will be using [Fiji](http://fiji.sc/) to illustrate these steps. We will use the image below (from Mary Ann Thompson) as an example. The original is available (in higher resolution) on [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Chronic_lymphocytic_leukemia.jpg). Just do a right click and select *copy* on the image below. You can then paste it in ImageJ via *Edit &rarr; Paste* (or {{<kbd>}}Ctrl + V{{</kbd>}}).
 
 *Please note:* This image is in JPG format, which is lossy. Saving this image again and again (even with a quality of 100) will cause artifacts. These can even influence your analysis. It's best practice to use a lossless format (e.g. TIF) when storing your data. Also: never overwrite your original data! Always work on a copy.
 
