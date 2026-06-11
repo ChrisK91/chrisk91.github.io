@@ -341,3 +341,9 @@ actions:
     data: {}
 mode: single
 {{</code>}}
+
+## Conclusion
+
+The final combination of helpers, scripts, automations and the EPSHome project allows you (and everyone else) to control your vacuum via an easy to use dashboard. When adding new areas, you can simply create new `input_booleans` and add new remote buttons to control them.
+
+This setup also allows you to control the vacuum via your normal dashboard by adding buttons for the `input_booleans` and a button to trigger the script. Changes in the selection are reflected between all dashboard.
