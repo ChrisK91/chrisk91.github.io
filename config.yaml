@@ -4,7 +4,7 @@ locale: en-us
 title: ChrisK91.me
 theme: chrisk91-theme
 disqusShortname: http-chrisk91-me
-googleAnalytics: "G-30MHG4HNXJ"
+#googleAnalytics: "G-30MHG4HNXJ"
 summaryLength: 100
 
 markup:
