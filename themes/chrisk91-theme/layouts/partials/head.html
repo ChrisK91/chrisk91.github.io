@@ -5,7 +5,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
-    {{ partialCached "css.html" . }}
+    {{ with (templates.Defer (dict "key" "global")) }}
+        {{ partial "css.html" . }}
+    {{ end }}
     <title>{{ if .IsHome }}Home - {{ else }}{{ if .Page.Title }}{{ .Page.Title }} - {{ end }}{{ end }}{{ .Site.Title }}</title>
     <script src="//unpkg.com/alpinejs" defer></script>
     <script defer src="https://analytics.chrisk91.me/script.js" data-website-id="5a247147-998a-4f84-a2a4-e5215f899bf4"></script>

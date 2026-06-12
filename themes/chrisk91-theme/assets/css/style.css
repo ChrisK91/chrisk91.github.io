@@ -1,10 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@source "hugo_stats.json";
+
+@theme {
+  --color-transparent: transparent;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-bluedark: #132A3D;
+  --color-bluemedium: #214457;
+  --color-lightgreen: #9CCBB2;
+  --color-lightyellow: #F0D69B;
+  --color-orange: #DB5A35;
+  --color-codebg: #2e3440;
+}
 
 @layer components {
     #TableOfContents ul, ul.toc {
-      @apply text-sm list-disc list-inside marker:text-lightgreen 2xl:text-base gap-y-3;
+      @apply text-sm list-disc list-inside 2xl:text-base gap-y-3;
     }
 
     #TableOfContents a, ul.toc a {
@@ -12,7 +24,7 @@
       }
 
     .keypoints ul {
-        @apply pl-2 ml-4 mr-2 text-lg list-disc list-outside marker:text-bluemedium gap-y-3;
+        @apply pl-2 ml-4 mr-2 text-lg list-disc list-outside gap-y-3;
     }
 
     [x-cloak] { display: none !important; }

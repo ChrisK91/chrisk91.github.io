@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="flex w-full mt-2 bg-white shadow-lg md:mt-4">
     <div
-        class="p-2 mb-8 md:pt-16 xl:pt-32 md:pl-8 xl:pl-20 2xl:pl-48 md:p-8 prose-p:font-serif prose-code:bg-bluemedium prose-code:text-white prose-code:px-1 prose-code:py-1 prose-code:rounded prose-code:select-all prose-code:font-mono prose-code:font-light prose-code:text-sm">
+        class="p-2 mb-8 md:pt-16 xl:pt-32 xl:pl-20 2xl:pl-48 md:p-8 prose-p:font-serif prose-code:bg-bluemedium prose-code:text-white prose-code:px-1 prose-code:py-1 prose-code:rounded prose-code:select-all prose-code:font-mono prose-code:font-light prose-code:text-sm min-w-0 w-full xl:max-w-4xl">
         <div class="prose lg:prose-xl" id="content">
             <h1 class="mb-0 lg:mb-1" id="top-of-article">{{ .Title }}</h1>
 
@@ -11,8 +11,8 @@
                 {{ end }}
             </div>
 
-            <small class="font-sans text-sm font-bold text-bluemedium">Posted on {{ .Date.Format "January 2, 2006" }} |
-                Reading time {{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}</small><br />
+            <small class="font-sans text-sm font-bold text-bluemedium mb-4">Posted on {{ .Date.Format "January 2, 2006" }} |
+                Reading time {{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}</small>
 
 
             {{ if isset .Params "keypoints"}}
@@ -34,7 +34,7 @@
     {{ if isset .Params "outline"}}
     {{ if .Params.outline}}
     <aside
-        class="sticky self-start invisible pb-2 pl-4 ml-8 border-t border-b border-l-4 shadow-lg top-8 2xl:border-l-8 top grow 2xl:ml-16 xl:visible xl:mt-32 border-l-orange border-bluedark">
+        class="sticky self-start invisible xl:pb-2 xl:pl-4 xl:ml-8 xl:border-t xl:border-b xl:border-l-4 xl:shadow-lg top-8 2xl:border-l-8 top xl:grow w-0 xl:w-auto 2xl:ml-16 xl:visible xl:mt-32 border-l-orange border-bluedark xl:w-64 xl:min-w-64 2xl:w-80 2xl:min-w-80">
         <h5 class="pt-3 pb-2 text-lg font-bold text-bluedark 2xl:text-4xl 2xl:font-extrabold">Outline</h5>
         <ul class="toc">
             <li><a href="#top-of-article">Back to top</a></li>
@@ -48,7 +48,7 @@
 {{ if isset .Params "comments"}}
 {{ if .Params.Comments }}
 <div class="p-2 mt-4 mb-8 bg-white shadow-lg md:p-8">
-    <div class="mb-2 prose lg:prose-xl" id="content">
+    <div class="mb-2 prose lg:prose-xl" id="comments-heading">
         <h1>Comments</h1>
     </div>
     {{ template "_internal/disqus.html" . }}
