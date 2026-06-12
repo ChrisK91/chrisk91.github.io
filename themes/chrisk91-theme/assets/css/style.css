@@ -12,6 +12,9 @@
   --color-lightyellow: #F0D69B;
   --color-orange: #DB5A35;
   --color-codebg: #2e3440;
+  --font-mono: 'calling-code', monospace;
+  --font-serif: 'Domine', serif;
+  --font-sans: 'futura-pt', sans-serif;
 }
 
 @layer components {
