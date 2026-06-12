@@ -20,3 +20,5 @@ While this page has not seen many new posts, I have a few other pages that have 
 This page is mainly my "hobby" page, so updates will continue to be sporadic. I'm currently working a lot with esphome and home assistant, so there might be some updates about that in the future.
 
 I do plan on updating this site to Tailwind 4 sometime in the future. I'm also thinking about the comments. They currently use Disqus, which I might change to another service in the future (or remove them entirely and "embed" the existing comments statically so they wont get lost).
+
+**Update:** The site has now also been updated to Tailwind 4, which wasn't really too much of an issue. Hugo has a [`tailwindcss` function](https://gohugo.io/functions/css/tailwindcss/) with a good explanation to get you almost all the way there.

@@ -182,6 +182,7 @@
       "prose-code:select-all",
       "prose-code:text-sm",
       "prose-code:text-white",
+      "prose-li:font-serif",
       "prose-p:font-serif",
       "pt-3",
       "px-2",
