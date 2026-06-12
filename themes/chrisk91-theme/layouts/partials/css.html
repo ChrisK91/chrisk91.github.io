@@ -1,8 +1,12 @@
-{{ $styles := resources.Get "/css/style.css" }}
-{{ $styles = $styles | css.PostCSS }}
-{{ if hugo.IsProduction }}
-	{{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
-{{ else }}
-	{{ $styles = $styles | resources.ExecuteAsTemplate (printf "css/index.dev.%v.css" now.UnixMilli) .}}
+{{ with resources.Get "css/style.css" }}
+  {{ $opts := dict "minify" (not hugo.IsDevelopment) }}
+  {{ with . | css.TailwindCSS $opts }}
+    {{ if hugo.IsDevelopment }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ else }}
+      {{ with . | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{ end }}
+    {{ end }}
+  {{ end }}
 {{ end }}
-<link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
