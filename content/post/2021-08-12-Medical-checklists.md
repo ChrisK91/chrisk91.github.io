@@ -21,11 +21,11 @@ I've never been really creative with names, so I just took the first domain that
 
 ## Technical aspects
 
-The site itself is built with Hugo. With new projects, I try to incorporate a few things for me to learn. I was already a bit familiar with Hugo, but this time I wanted to start from the ground up. Starting with the naked tailwind based [theme from @dirkolbrich](https://github.com/dirkolbrich/hugo-theme-tailwindcss-starter){:target="_blank"}, I've modified slightly and added bilingual support.
+The site itself is built with Hugo. With new projects, I try to incorporate a few things for me to learn. I was already a bit familiar with Hugo, but this time I wanted to start from the ground up. Starting with the naked tailwind based [theme from @dirkolbrich](https://github.com/dirkolbrich/hugo-theme-tailwindcss-starter), I've modified slightly and added bilingual support.
 
 Thanks to the new GitHub Actions, there is now an action to build a Hugo page, without relying on third party services.
 
-The page itself is hosted on GitHub pages, and the code-behind-repository is publicly available via [@ChrisK91/Checklists](https://github.com/chrisk91/checklists){:target="_blank"}.
+The page itself is hosted on GitHub pages, and the code-behind-repository is publicly available via [@ChrisK91/Checklists](https://github.com/chrisk91/checklists).
 
 There are a few calculators, which are based on Vue.js (since I don't really know about the new JavaScript stuff). But they work, and that's enough for me. The site itself is fully static, since I wanted to package it as a web app, so it works without internet connectivity. But so far I didn't have too much luck with that... Especially offline caching makes this difficult.
 
