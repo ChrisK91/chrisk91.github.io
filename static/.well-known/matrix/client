@@ -1,6 +1,9 @@
 {
     "cc.etke.ketesa": {
-        "asManagedUsers": [],
+        "asManagedUsers": [
+            "^@signalbot:chrisk91\\.me$",
+            "^@signal_[a-zA-Z0-9]+:chrisk91\\.me$"
+        ],
         "corsCredentials": "same-origin",
         "externalAuthProvider": false,
         "menu": [],
