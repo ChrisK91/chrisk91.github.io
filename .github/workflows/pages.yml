@@ -63,6 +63,7 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./public
+          include-hidden-files: true
 
   # Deployment job
   deploy:
