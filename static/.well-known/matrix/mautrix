@@ -1,5 +1,6 @@
 {
     "fi.mau.bridges": [
-        "https://matrix.chrisk91.me/bridges/signal"
+        "https://matrix.chrisk91.me/bridges/signal",
+        "https://matrix.chrisk91.me/bridges/whatsapp"
     ]
 }

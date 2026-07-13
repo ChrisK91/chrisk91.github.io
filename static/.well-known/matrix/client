@@ -2,7 +2,9 @@
     "cc.etke.ketesa": {
         "asManagedUsers": [
             "^@signalbot:chrisk91\\.me$",
-            "^@signal_[a-zA-Z0-9]+:chrisk91\\.me$"
+            "^@signal_[a-zA-Z0-9]+:chrisk91\\.me$",
+            "^@whatsappbot:chrisk91\\.me$",
+            "^@whatsapp_[0-9]+:chrisk91\\.me$"
         ],
         "corsCredentials": "same-origin",
         "externalAuthProvider": false,
