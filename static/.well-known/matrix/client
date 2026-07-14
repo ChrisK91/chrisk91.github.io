@@ -1,6 +1,9 @@
 {
     "cc.etke.ketesa": {
         "asManagedUsers": [
+            "^@bot\\.matrix\\-reminder\\-bot:chrisk91\\.me$",
+            "^@blueskybot:chrisk91\\.me$",
+            "^@bluesky_[a-zA-Z0-9]+:chrisk91\\.me$",
             "^@signalbot:chrisk91\\.me$",
             "^@signal_[a-zA-Z0-9]+:chrisk91\\.me$",
             "^@whatsappbot:chrisk91\\.me$",
